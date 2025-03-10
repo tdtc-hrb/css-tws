@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.4.2"><title>flex</title></head> <body> <h1>flex</h1>  <p><em>Utilities for controlling how flex items both grow and shrink.</em></p> <p>2025-03-04</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>flex-<number></number></td><td>flex: <number>;</number></td></tr><tr><td>flex-<fraction></fraction></td><td>flex: calc(<fraction> * 100%);</fraction></td></tr><tr><td>flex-auto</td><td>flex: 1 1 auto;</td></tr><tr><td>flex-initial</td><td>flex: 0 1 auto;</td></tr><tr><td>flex-none</td><td>flex: none;</td></tr><tr><td>flex-(<custom-property>)</custom-property></td><td>flex: var(<custom-property>);</custom-property></td></tr><tr><td>flex-[<value>]</value></td><td>flex: <value>;</value></td></tr></tbody></table>
+<h2 id="flex">flex</h2>
+<ul>
+<li>Basic example</li>
+<li>Initial</li>
+<li>Auto</li>
+<li>None</li>
+<li>Using a custom value</li>
+</ul>
+<h3 id="basic-example">Basic example</h3>
+<p>Use <code>flex-<number></number></code> utilities like <code>flex-1</code> to allow
+a flex item to grow and shrink as needed, ignoring its initial size:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="flex"></span></span>
+<span class="line"><span>  &#x3C;div class="w-14 flex-none ...">01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div class="w-64 flex-1 ...">02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div class="w-32 flex-1 ...">03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="initial">Initial</h3>
+<p>Use <code>flex-initial</code> to allow a flex item to shrink but not grow, taking into account its initial size:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="flex"></span></span>
+<span class="line"><span>  &#x3C;div class="w-14 flex-none ...">01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div class="w-64 flex-initial ...">02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div class="w-32 flex-initial ...">03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="auto">Auto</h3>
+<p>Use <code>flex-auto</code> to allow a flex item to grow and shrink, taking into account its initial size:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="flex ..."></span></span>
+<span class="line"><span>  &#x3C;div class="w-14 flex-none ...">01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div class="w-64 flex-auto ...">02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div class="w-32 flex-auto ...">03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="none">None</h3>
+<p>Use <code>flex-none</code> to prevent a flex item from growing or shrinking:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="flex ..."></span></span>
+<span class="line"><span>  &#x3C;div class="w-14 flex-none ...">01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div class="w-32 flex-none ...">02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div class="flex-1 ...">03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="using-a-custom-value">Using a custom value</h3>
+<p>Use the <code>flex-[<value>]</value></code> syntax to set the flex shorthand property based on a completely custom value:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="flex-[3_1_auto] ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/flex">flex</a></li>
+<li><a href="https://tailwindcss.com/docs/flex#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>

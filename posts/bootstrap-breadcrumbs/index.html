@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.4.2"><title>面包屑（breadcrumbs）</title></head> <body> <h1>面包屑（breadcrumbs）</h1>  <p><em>Bootstrap</em></p> <p>2020-05-16</p> <p>Written by: tdtc</p> <p>在很多网站上都有一个导航记录栏 - 面包屑；</p>
+<h1 id="官方文档">官方文档</h1>
+<p><a href="https://v3.bootcss.com/components/#breadcrumbs">举例</a></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="xml"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">ol</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"breadcrumb"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">li</span><span style="color:#E1E4E8">>&#x3C;</span><span style="color:#85E89D">a</span><span style="color:#B392F0"> href</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"#"</span><span style="color:#E1E4E8">>Home&#x3C;/</span><span style="color:#85E89D">a</span><span style="color:#E1E4E8">>&#x3C;/</span><span style="color:#85E89D">li</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">li</span><span style="color:#E1E4E8">>&#x3C;</span><span style="color:#85E89D">a</span><span style="color:#B392F0"> href</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"#"</span><span style="color:#E1E4E8">>Library&#x3C;/</span><span style="color:#85E89D">a</span><span style="color:#E1E4E8">>&#x3C;/</span><span style="color:#85E89D">li</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">li</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"active"</span><span style="color:#E1E4E8">>Data&#x3C;/</span><span style="color:#85E89D">li</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">ol</span><span style="color:#E1E4E8">></span></span></code></pre>
+<h1 id="php-example">php example</h1>
+<blockquote>
+<p>CodeIgniter v2.2.x/3.x</p>
+</blockquote>
+<p>建立一个php文件
+breadcrumb.php</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="php"><code><span class="line"><span style="color:#F97583">&#x3C;</span><span style="color:#79B8FF">ol</span><span style="color:#F97583"> class=</span><span style="color:#9ECBFF">"breadcrumb"</span><span style="color:#F97583">></span></span>
+<span class="line"><span style="color:#F97583">  &#x3C;?</span><span style="color:#79B8FF">php</span><span style="color:#79B8FF"> echo</span><span style="color:#B392F0"> get_breadcrumb</span><span style="color:#E1E4E8">($breadData, $menu_prefix); </span><span style="color:#F97583">?></span></span>
+<span class="line"><span style="color:#F97583">  &#x3C;</span><span style="color:#79B8FF">li</span><span style="color:#F97583"> class=</span><span style="color:#9ECBFF">"active"</span><span style="color:#F97583">></span></span>
+<span class="line"><span style="color:#F97583">  &#x3C;?</span><span style="color:#79B8FF">php</span><span style="color:#79B8FF"> echo</span><span style="color:#79B8FF"> empty</span><span style="color:#E1E4E8">($breadData) </span><span style="color:#F97583">?</span></span>
+<span class="line"><span style="color:#79B8FF">  $this</span><span style="color:#F97583">-></span><span style="color:#E1E4E8">Glossary_M</span><span style="color:#F97583">-></span><span style="color:#B392F0">get_word</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'home'</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">$this</span><span style="color:#F97583">-></span><span style="color:#E1E4E8">data[</span><span style="color:#9ECBFF">'lang_id'</span><span style="color:#E1E4E8">]) </span><span style="color:#F97583">:</span></span>
+<span class="line"><span style="color:#E1E4E8">  $body;</span></span>
+<span class="line"><span style="color:#F97583">  ?></span></span>
+<span class="line"><span style="color:#F97583">  &#x3C;/</span><span style="color:#79B8FF">li</span><span style="color:#F97583">></span></span>
+<span class="line"><span style="color:#F97583">&#x3C;/</span><span style="color:#79B8FF">ol</span><span style="color:#F97583">></span></span></code></pre>
+<p>在helper中建立如下方法：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="php"><code><span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> get_breadcrumb</span><span style="color:#E1E4E8">($array, $prefix </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> NULL</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">	$str </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> ''</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">	if</span><span style="color:#E1E4E8"> (</span><span style="color:#79B8FF">count</span><span style="color:#E1E4E8">($array)) {</span></span>
+<span class="line"><span style="color:#F97583">		foreach</span><span style="color:#E1E4E8"> ($array </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> $item) {</span></span>
+<span class="line"><span style="color:#F97583">			if</span><span style="color:#E1E4E8"> ($item[</span><span style="color:#9ECBFF">'homeFlag'</span><span style="color:#E1E4E8">]) {</span></span>
+<span class="line"><span style="color:#6A737D">				// '&#x3C;li>&#x3C;a href="http://'</span></span>
+<span class="line"><span style="color:#E1E4E8">				$str </span><span style="color:#F97583">.=</span><span style="color:#9ECBFF"> '&#x3C;li>&#x3C;a href="'</span><span style="color:#F97583"> .</span><span style="color:#E1E4E8"> $item[</span><span style="color:#9ECBFF">'linkAddr'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">.</span><span style="color:#9ECBFF"> '">'</span><span style="color:#F97583"> .</span><span style="color:#B392F0"> e</span><span style="color:#E1E4E8">($item[</span><span style="color:#9ECBFF">'name'</span><span style="color:#E1E4E8">]) </span><span style="color:#F97583">.</span><span style="color:#9ECBFF"> '&#x3C;/a>&#x3C;/li>'</span><span style="color:#F97583"> .</span><span style="color:#79B8FF"> PHP_EOL</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">			}</span></span>
+<span class="line"><span style="color:#F97583">			else</span></span>
+<span class="line"><span style="color:#E1E4E8">			  $str </span><span style="color:#F97583">.=</span><span style="color:#9ECBFF"> '&#x3C;li>&#x3C;a href="'</span><span style="color:#F97583"> .</span><span style="color:#E1E4E8"> $prefix </span><span style="color:#F97583">.</span><span style="color:#E1E4E8"> $item[</span><span style="color:#9ECBFF">'linkAddr'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">.</span><span style="color:#9ECBFF"> '">'</span><span style="color:#F97583"> .</span><span style="color:#B392F0"> e</span><span style="color:#E1E4E8">($item[</span><span style="color:#9ECBFF">'name'</span><span style="color:#E1E4E8">]) </span><span style="color:#F97583">.</span><span style="color:#9ECBFF"> '&#x3C;/a>&#x3C;/li>'</span><span style="color:#F97583"> .</span><span style="color:#79B8FF"> PHP_EOL</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">		}</span></span>
+<span class="line"><span style="color:#E1E4E8">	}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">	return</span><span style="color:#E1E4E8"> $str;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>实现效果：
+<img src="https://gitee.com/xiaobin80/csdn/raw/master/images/20140113150326015.png" alt="website info"></p>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>

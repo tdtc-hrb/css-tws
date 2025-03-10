@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.4.2"><title>Grid system</title></head> <body> <h1>Grid system</h1>  <p><em>Bootstrap2, 3, 4</em></p> <p>2023-03-10</p> <p>Written by: tdtc</p> <p>在V2.3.2中，栅格系统默认是不支持移动设备的；<br>
+但V3.0版本，已经默认支持移动设备。</p>
+<p>在V4.6.x, 更加细化了移动设备支持。</p>
+<h1 id="v2">v2</h1>
+<p><a href="https://getbootstrap.com/2.3.2/scaffolding.html#gridSystem">Bootstrap(v2)</a> 默认的栅格系统为12列 ，
+形成一个940px宽的容器，默认没有启用 “<a href="https://getbootstrap.com/2.3.2/scaffolding.html#responsive">响应式布局特性</a>” 。<br>
+如果加入响应式布局CSS文件，栅格系统会自动根据可视窗口的宽度从724px到1170px进行动态调整。<br>
+在可视窗口低于767px宽的情况下，列将不再固定并且会在垂直方向堆叠。</p>
+<h2 id="example">example</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="xml"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"row"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"span4"</span><span style="color:#E1E4E8">>...&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"span8"</span><span style="color:#E1E4E8">>...&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span></code></pre>
+<h1 id="v3">v3</h1>
+<blockquote>
+<p>class变化：.span* -〉.col-md-*</p>
+</blockquote>
+<p><a href="https://getbootstrap.com/docs/3.4/css/#grid">Bootstrap(v3)</a> 内置了一套响应式、移动设备优先的流式栅格系统，
+随着屏幕设备或视口（viewport）尺寸的增加，系统会自动分为最多12列。
+它包含了易于使用的<a href="https://getbootstrap.com/docs/3.4/css/#grid-example-basic">预定义classe</a>，
+还有强大的<a href="https://getbootstrap.com/docs/3.4/css/#grid-less">mixin用于生成更具语义的布局</a>。</p>
+<h2 id="grid-options"><a href="https://getbootstrap.com/docs/3.4/css/#grid-options">Grid options</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Name</th><th>Size</th></tr></thead><tbody><tr><td>Extra small devices Phones</td><td>&#x3C;768px</td></tr><tr><td>Small devices Tablets</td><td>≥768px</td></tr><tr><td>Medium devices Desktops</td><td>≥992px</td></tr><tr><td>Large devices Desktops</td><td>≥1200px</td></tr></tbody></table>
+<h2 id="example-1">example</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="xml"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"row"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"col-md-4"</span><span style="color:#E1E4E8">>...&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"col-md-8"</span><span style="color:#E1E4E8">>...&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span></code></pre>
+<h1 id="v4">v4</h1>
+<p><a href="https://getbootstrap.com/docs/4.6/layout/grid/">Bootstrap(v4)</a> 调整了小屏幕的适配。
+Switch from Less to Sass for the source CSS files</p>
+<h2 id="grid-options-1"><a href="https://getbootstrap.com/docs/4.6/layout/grid/#grid-options">Grid options</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Name</th><th>Size</th></tr></thead><tbody><tr><td>Extra small</td><td>&#x3C;576px</td></tr><tr><td>Small</td><td>≥576px</td></tr><tr><td>Medium</td><td>≥768px</td></tr><tr><td>Large</td><td>≥992px</td></tr><tr><td>Extra large</td><td>≥1200px</td></tr></tbody></table>
+<h2 id="example-2">example</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="xml"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"row"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"col-lg-4"</span><span style="color:#E1E4E8">>...&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"col-lg-8"</span><span style="color:#E1E4E8">>...&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span></code></pre>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
