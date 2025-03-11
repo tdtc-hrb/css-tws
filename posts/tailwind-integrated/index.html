@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.4.2"><title>Integrated tailwindccs</title></head> <body> <h1>Integrated tailwindccs</h1>  <p><em>Using tailwind in an integrated way</em></p> <p>2023-03-11</p> <p>Written by: tdtc</p> <ul>
+<li>install</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>cd veic-web_asp</span></span>
+<span class="line"><span>npm init -y</span></span>
+<span class="line"><span>npm install tailwindcss @tailwindcss/cli</span></span></code></pre>
+<h3 id="gen">gen</h3>
+<ul>
+<li>v4</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>npx @tailwindcss/cli -i ./wwwroot/css/site2.css -o ./wwwroot/css/site2tw.css --optimize</span></span></code></pre>
+<ul>
+<li>legacy</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>npx @tailwindcss/cli -i ./wwwroot/css/site2-legacy.css -o ./wwwroot/css/site2tw.css --optimize</span></span></code></pre>
+<h3 id="v4---new">v4 - new</h3>
+<ul>
+<li>site2.css:</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>@layer theme, base, components, utilities;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@import "tailwindcss/theme.css" layer(theme) prefix(tw);</span></span>
+<span class="line"><span>@import "tailwindcss/utilities.css" prefix(tw);</span></span></code></pre>
+<h3 id="legacy">legacy</h3>
+<ul>
+<li><a href="https://tailwindcss.com/docs/upgrade-guide#using-a-javascript-config-file">load config</a></li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>@config "../../tailwind.config.js";</span></span></code></pre>
+<ul>
+<li>tailwind.config.js:</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>module.exports = {</span></span>
+<span class="line"><span>    content: ["./**/*.html"],</span></span>
+<span class="line"><span>    prefix: "tw",</span></span>
+<span class="line"><span>    important: true,</span></span>
+<span class="line"><span>    corePlugins: {</span></span>
+<span class="line"><span>        preflight: false,</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<ul>
+<li>site2-legacy.css:</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>@config "../../tailwind.config.js";</span></span>
+<span class="line"><span>@layer theme, base, components, utilities;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@import "tailwindcss/theme.css" layer(theme);</span></span>
+<span class="line"><span>@import "tailwindcss/utilities.css";</span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/installation/tailwind-cli">tailwind cli</a></li>
+<li><a href="https://tailwindcss.com/docs/upgrade-guide#using-tailwind-cli">Using CLI(cmd) instead of tailwindcss(cmd)</a></li>
+<li><a href="https://tailwindcss.com/docs/styling-with-utility-classes#using-the-prefix-option">prefix - v4</a></li>
+<li><a href="https://github.com/tailwindlabs/tailwindcss/discussions/15755#discussioncomment-11932934">Use Tailwind v4 and Bootrstap 5 together -v4</a>:</li>
+<li><a href="https://stackoverflow.com/a/74199891">Can use both Tailwind css and Bootstrap 4 at the same time? - v3</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
