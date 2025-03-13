@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.4.2"><title>css class</title></head> <body> <h1>css class</h1>  <p><em>替代 marquee 元素 - HTML</em></p> <p>2025-03-12</p> <p>Written by: tdtc</p> <h2 id="input-file">input file</h2>
+<p>site2.css:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>@theme {</span></span>
+<span class="line"><span>  --animate-marquee1: marquee1 15s linear infinite;</span></span>
+<span class="line"><span>  --animate-marquee2: marquee2 15s linear infinite;</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>  @keyframes marquee1 {</span></span>
+<span class="line"><span>        0% {</span></span>
+<span class="line"><span>          transform: translateX(0%);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        100% {</span></span>
+<span class="line"><span>          transform: translateX(-100%);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    @keyframes marquee2 {</span></span>
+<span class="line"><span>        0% {</span></span>
+<span class="line"><span>          transform: translateX(100%);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        100% {</span></span>
+<span class="line"><span>          transform: translateX(0%);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre>
+<h3 id="output">output</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>npx @tailwindcss/cli -i ./wwwroot/css/site2.css -o ./wwwroot/css/site2tw.css --optimize</span></span></code></pre>
+<p>also see <a href="https://tdtc-hrb.github.io/css-tws/posts/tailwind-integrated/">tailwind-integrated</a></p>
+<p>注意：使用v4的cli现在解析v2的配置文件(tailwind.config.js)有问题!</p>
+<h2 id="css-without-frameworks">CSS without frameworks</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>        .marquee {</span></span>
+<span class="line"><span>            height: 50px;</span></span>
+<span class="line"><span>            overflow: hidden;</span></span>
+<span class="line"><span>            position: relative;</span></span>
+<span class="line"><span>            background: #fefefe;</span></span>
+<span class="line"><span>            color: #333;</span></span>
+<span class="line"><span>            border: 1px solid #4a4a4a;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        .marquee p {</span></span>
+<span class="line"><span>            position: absolute;</span></span>
+<span class="line"><span>            width: 100%;</span></span>
+<span class="line"><span>            height: 100%;</span></span>
+<span class="line"><span>            margin: 0;</span></span>
+<span class="line"><span>            line-height: 50px;</span></span>
+<span class="line"><span>            text-align: center;</span></span>
+<span class="line"><span>            -moz-transform: translateX(100%);</span></span>
+<span class="line"><span>            -webkit-transform: translateX(100%);</span></span>
+<span class="line"><span>            transform: translateX(100%);</span></span>
+<span class="line"><span>            -moz-animation: scroll-left 2s linear infinite;</span></span>
+<span class="line"><span>            -webkit-animation: scroll-left 2s linear infinite;</span></span>
+<span class="line"><span>            animation: scroll-left 20s linear infinite;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        @-moz-keyframes scroll-left {</span></span>
+<span class="line"><span>            0% {</span></span>
+<span class="line"><span>                -moz-transform: translateX(100%);</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>            100% {</span></span>
+<span class="line"><span>                -moz-transform: translateX(-100%);</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        @-webkit-keyframes scroll-left {</span></span>
+<span class="line"><span>            0% {</span></span>
+<span class="line"><span>                -webkit-transform: translateX(100%);</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>            100% {</span></span>
+<span class="line"><span>                -webkit-transform: translateX(-100%);</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        @keyframes scroll-left {</span></span>
+<span class="line"><span>            0% {</span></span>
+<span class="line"><span>                -moz-transform: translateX(100%);</span></span>
+<span class="line"><span>                -webkit-transform: translateX(100%);</span></span>
+<span class="line"><span>                transform: translateX(100%);</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>            100% {</span></span>
+<span class="line"><span>                -moz-transform: translateX(-100%);</span></span>
+<span class="line"><span>                -webkit-transform: translateX(-100%);</span></span>
+<span class="line"><span>                transform: translateX(-100%);</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>        }</span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/theme#defining-animation-keyframes">Defining animation keyframes - format</a></li>
+<li><a href="https://tailwindcss.com/docs/theme#default-theme-variable-reference">Default theme variable reference- multiple keys</a></li>
+<li><a href="https://jackwhiting.co.uk/posts/creating-a-marquee-with-tailwind-css">Creating a Marquee with Tailwind CSS - v2</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
