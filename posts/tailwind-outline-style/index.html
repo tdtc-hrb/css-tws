@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.4.2"><title>outline style</title></head> <body> <h1>outline style</h1>  <p><em>Utilities for controlling the style of an element&#39;s outline.</em></p> <p>2025-03-13</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>outline-solid</td><td>outline-style: solid;</td></tr><tr><td>outline-dashed</td><td>outline-style: dashed;</td></tr><tr><td>outline-dotted</td><td>outline-style: dotted;</td></tr><tr><td>outline-double</td><td>outline-style: double;</td></tr><tr><td>outline-none</td><td>outline-style: none;</td></tr><tr><td>outline-hidden</td><td>outline: 2px solid transparent; outline-offset: 2px;</td></tr></tbody></table>
+<h4 id="border-和-outline"><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/outline#border_%E5%92%8C_outline">border 和 outline</a></h4>
+<ul>
+<li>outline 不占据空间，绘制于元素内容周围。</li>
+<li>可以是非矩形的。</li>
+</ul>
+<h3 id="basic-example">Basic example</h3>
+<p>Use utilities like <code>outline-solid</code> and <code>outline-dashed</code> to set the style of an element’s outline:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;button class="outline-2 outline-offset-2 outline-solid ...">Button A&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;button class="outline-2 outline-offset-2 outline-dashed ...">Button B&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;button class="outline-2 outline-offset-2 outline-dotted ...">Button C&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;button class="outline-3 outline-offset-2 outline-double ...">Button D&#x3C;/button></span></span></code></pre>
+<h3 id="hiding-an-outline">Hiding an outline</h3>
+<p>Use the <code>outline-hidden</code> utility to hide the default browser
+outline on focused elements, while still preserving the outline in forced colors mode:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;input class="focus:border-indigo-600 focus:outline-hidden ..." type="text" /></span></span></code></pre>
+<p>It is highly recommended to apply your own focus styling for accessibility when using this utility.</p>
+<h3 id="removing-outlines">Removing outlines</h3>
+<p>Use the <code>outline-none</code> utility to completely remove the default browser outline on focused elements:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="focus-within:outline-2 focus-within:outline-indigo-600 ..."></span></span>
+<span class="line"><span>  &#x3C;textarea class="outline-none ..." placeholder="Leave a comment..." /></span></span>
+<span class="line"><span>  &#x3C;button class="..." type="button">Post&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<p>It is highly recommended to apply your own focus styling for accessibility when using this utility.</p>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/outline-style">outline style</a></li>
+<li><a href="https://tailwindcss.com/docs/outline-style#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>

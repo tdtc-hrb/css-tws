@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.4.2"><title>group 状态</title></head> <body> <h1>group 状态</h1>  <p><em>Using tailwind css for hover and focus on group</em></p> <p>2025-03-13</p> <p>Written by: tdtc</p> <p>When you need to style an element based on the state of some parent element,
+mark the parent with the <cod>group class, and use <code>group-*</code> variants
+like <code>group-hover</code> to style the target element:</cod></p>
+<p>Hover over the card to see both text elements change color</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;a href="#" class="group ..."></span></span>
+<span class="line"><span>  &#x3C;div></span></span>
+<span class="line"><span>    &#x3C;svg class="stroke-sky-500 group-hover:stroke-white ..." fill="none" viewBox="0 0 24 24"></span></span>
+<span class="line"><span>      &#x3C;!-- ... --></span></span>
+<span class="line"><span>    &#x3C;/svg></span></span>
+<span class="line"><span>    &#x3C;h3 class="text-gray-900 group-hover:text-white ...">New project&#x3C;/h3></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;p class="text-gray-500 group-hover:text-white ...">Create a new project from a variety of starting templates.&#x3C;/p></span></span>
+<span class="line"><span>&#x3C;/a></span></span></code></pre>
+<p>This pattern works with every pseudo-class variant,
+for example <code>group-focus</code>, <code>group-active</code>, or even <code>group-odd</code>.</p>
+<h3 id="differentiating-nested-groups">Differentiating nested groups</h3>
+<p>When nesting groups, you can style something based on the state of a specific parent group
+by giving that parent a unique group name using a <code>group/{name}</code> class,
+and including that name in variants using classes like <code>group-hover/{name}</code>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;ul role="list"></span></span>
+<span class="line"><span>  {#each people as person}</span></span>
+<span class="line"><span>    &#x3C;li class="group/item ..."></span></span>
+<span class="line"><span>      &#x3C;!-- ... --></span></span>
+<span class="line"><span>      &#x3C;a class="group/edit invisible group-hover/item:visible ..." href="tel:{person.phone}"></span></span>
+<span class="line"><span>        &#x3C;span class="group-hover/edit:text-gray-700 ...">Call&#x3C;/span></span></span>
+<span class="line"><span>        &#x3C;svg class="group-hover/edit:translate-x-0.5 group-hover/edit:text-gray-500 ...">&#x3C;!-- ... -->&#x3C;/svg></span></span>
+<span class="line"><span>      &#x3C;/a></span></span>
+<span class="line"><span>    &#x3C;/li></span></span>
+<span class="line"><span>  {/each}</span></span>
+<span class="line"><span>&#x3C;/ul></span></span></code></pre>
+<p>Groups can be named however you like and don’t need to be configured in any way — just name your groups
+directly in your markup and Tailwind will automatically generate the necessary CSS.</p>
+<h3 id="arbitrary-groups">Arbitrary groups</h3>
+<p>You can create one-off <code>group-*</code> variants on the fly by providing your own
+selector as an <a href="https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values">arbitrary value</a> between square brackets:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="group is-published"></span></span>
+<span class="line"><span>  &#x3C;div class="hidden group-[.is-published]:block"></span></span>
+<span class="line"><span>    Published</span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<p>For more control, you can use the <code>&#x26;</code> character to mark where <code>.group</code> should end
+up in the final selector relative to the selector you are passing in:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="group"></span></span>
+<span class="line"><span>  &#x3C;div class="group-[:nth-of-type(3)_&#x26;]:block"></span></span>
+<span class="line"><span>    &#x3C;!-- ... --></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="implicit-groups">Implicit groups</h3>
+<p>The <code>in-*</code> variant works similarly to <code>group</code> except you don’t need to add <code>group</code> to the parent element:</p>
+<ul>
+<li>orig</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div tabindex="0" class="group"></span></span>
+<span class="line"><span>  &#x3C;div class="opacity-50 group-focus:opacity-100"></span></span>
+<span class="line"><span>    &#x3C;!-- ... --></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<ul>
+<li>now</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div tabindex="0"></span></span>
+<span class="line"><span>  &#x3C;div class="opacity-50 in-focus:opacity-100"></span></span>
+<span class="line"><span>    &#x3C;!-- ... --></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<p>The <code>in-*</code> variant responds to state changes in any parent,
+so if you want more fine-grained control you’ll need to use <code>group</code> instead.</p>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state">Styling based on parent state</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>

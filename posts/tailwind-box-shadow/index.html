@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.4.2"><title>box shadow</title></head> <body> <h1>box shadow</h1>  <p><em>Utilities for controlling the box shadow of an element.</em></p> <p>2025-03-13</p> <p>Written by: tdtc</p> <p>所有以</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>shadow:</span></span></code></pre>
+<p>开头都是box阴影</p>
+<h3 id="basic-example">Basic example</h3>
+<p>Use utilities like <code>shadow-sm</code> and <code>shadow-lg</code> to apply different sized outer box shadows to an element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="shadow-md ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="shadow-lg ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="shadow-xl ...">&#x3C;/div></span></span></code></pre>
+<h3 id="setting-the-shadow-color">Setting the shadow color</h3>
+<p>Use utilities like <code>shadow-indigo-500</code> and <code>shadow-cyan-500/50</code> to change the color of a box shadow:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;button class="bg-cyan-500 shadow-lg shadow-cyan-500/50 ...">Subscribe&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;button class="bg-blue-500 shadow-lg shadow-blue-500/50 ...">Subscribe&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;button class="bg-indigo-500 shadow-lg shadow-indigo-500/50 ...">Subscribe&#x3C;/button></span></span></code></pre>
+<h3 id="adding-an-inset-shadow">Adding an inset shadow</h3>
+<p>Use utilities like <code>inset-shadow-xs</code> and <code>inset-shadow-sm</code> to apply an inset box shadow to an element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="inset-shadow-2xs ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="inset-shadow-xs ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="inset-shadow-sm ...">&#x3C;/div></span></span></code></pre>
+<p>These utilities can be useful for things like form controls or wells.</p>
+<h3 id="setting-the-inset-shadow-color">Setting the inset shadow color</h3>
+<p>Use utilities like <code>inset-shadow-indigo-500</code> and <code>inset-shadow-cyan-500/50</code> to change the color of an inset box shadow:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="inset-shadow-sm inset-shadow-indigo-500 ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="inset-shadow-sm inset-shadow-indigo-500/50 ...">&#x3C;/div></span></span></code></pre>
+<h3 id="adding-a-ring">Adding a ring</h3>
+<p>Use <code>ring</code> or <code>ring-<number></number></code> utilities
+like <code>ring-2</code> and <code>ring-4</code> to apply a solid box-shadow to an element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;button class="ring ...">Subscribe&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;button class="ring-2 ...">Subscribe&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;button class="ring-4 ...">Subscribe&#x3C;/button></span></span></code></pre>
+<p>By default rings match the currentColor of the element they are applied to.</p>
+<h3 id="setting-the-ring-color">Setting the ring color</h3>
+<p>Use utilities like <code>ring-indigo-500</code> and <code>ring-cyan-500/50</code> to change the color of a ring:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;button class="ring-2 ring-blue-500 ...">Subscribe&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;button class="ring-2 ring-blue-500/50 ...">Subscribe&#x3C;/button></span></span></code></pre>
+<p>By default rings have an opacity of 100% but you can adjust this using the opacity modifier.</p>
+<h3 id="adding-an-inset-ring">Adding an inset ring</h3>
+<p>Use <code>inset-ring</code> or <code>inset-ring-<number></number></code> utilities
+like <code>inset-ring-2</code> and <code>inset-ring-4</code> to apply a solid inset box-shadow to an element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;button class="inset-ring ...">Subscribe&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;button class="inset-ring-2 ...">Subscribe&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;button class="inset-ring-4 ...">Subscribe&#x3C;/button></span></span></code></pre>
+<p>By default inset rings match the currentColor of the element they are applied to.</p>
+<h3 id="setting-the-inset-ring-color">Setting the inset ring color</h3>
+<p>Use utilities like <code>inset-ring-indigo-500</code> and <code>inset-ring-cyan-500/50</code> to change the color of an inset ring:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;button class="inset-ring-2 inset-ring-blue-500 ...">Subscribe&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;button class="inset-ring-2 inset-ring-blue-500/50 ...">Subscribe&#x3C;/button></span></span></code></pre>
+<p>By default inset rings have an opacity of 100% but you can adjust this using the opacity modifier.</p>
+<h3 id="removing-a-box-shadow">Removing a box shadow</h3>
+<p>Use the <code>shadow-none</code>, <code>inset-shadow-none</code>,<code>ring-0</code>, and
+<code>inset-ring-0</code> utilities to remove an existing box shadow from an element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="shadow-none ...">&#x3C;/div></span></span></code></pre>
+<h3 id="using-a-custom-value">Using a custom value</h3>
+<p>Use utilities like <code>shadow-[<value>]</value></code>,<code>inset-shadow-[<value>]</value></code>,
+<code>ring-[<value>]</value></code>, and <code>inset-ring-[<value>]</value></code> to set the box shadow based on a completely custom value:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="shadow-[0_35px_35px_rgba(0,0,0,0.25)] ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/box-shadow">box shadow</a></li>
+<li><a href="https://tailwindcss.com/docs/box-shadow#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>

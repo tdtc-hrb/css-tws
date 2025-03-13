@@ -6,19 +6,19 @@
 <span class="line"><span>npm install tailwindcss @tailwindcss/cli</span></span></code></pre>
 <h2 id="gen">gen</h2>
 <ul>
-<li>v4</li>
+<li>v4(new)</li>
 </ul>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>npx @tailwindcss/cli -i ./wwwroot/css/site2.css -o ./wwwroot/css/site2tw.css --optimize</span></span></code></pre>
 <ul>
-<li>legacy</li>
+<li>v3(legacy)</li>
 </ul>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>npx @tailwindcss/cli -i ./wwwroot/css/site2-legacy.css -o ./wwwroot/css/site3tw.css --optimize</span></span></code></pre>
-<p>About site2.css and site2-legacy.css:</p>
+<p>About input file:</p>
 <ul>
-<li>Rename site.css to site2.css/site2-legacy.css;</li>
+<li>Rename site.css to site2.css or site2-legacy.css;</li>
 <li>Add: legacy or new at the beginning of the file.</li>
 </ul>
-<h3 id="v4---new">v4 - new</h3>
+<h3 id="new">new</h3>
 <ul>
 <li>site2.css:</li>
 </ul>
@@ -28,12 +28,13 @@
 <span class="line"><span>@import "tailwindcss/utilities.css" prefix(tw);</span></span></code></pre>
 <h3 id="legacy">legacy</h3>
 <ul>
-<li><a href="https://tailwindcss.com/docs/upgrade-guide#using-a-javascript-config-file">load config</a></li>
+<li>gen config file</li>
 </ul>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>@config "../../tailwind.config.js";</span></span></code></pre>
-<ul>
-<li>tailwind.config.js:</li>
-</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>cd gen-config-dir</span></span>
+<span class="line"><span>npm install -D tailwindcss@3 postcss autoprefixer</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>npx tailwindcss init -p</span></span></code></pre>
+<p>tailwind.config.js:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>module.exports = {</span></span>
 <span class="line"><span>    content: ["./**/*.html"],</span></span>
 <span class="line"><span>    prefix: "tw",</span></span>
@@ -52,7 +53,9 @@
 <span class="line"><span>@import "tailwindcss/utilities.css";</span></span></code></pre>
 <h2 id="ref">Ref</h2>
 <ul>
-<li><a href="https://tailwindcss.com/docs/installation/tailwind-cli">tailwind cli</a></li>
+<li><a href="https://tailwindcss.com/docs/installation/tailwind-cli">tailwind cli - v4</a></li>
+<li><a href="https://tailwindcss.com/docs/upgrade-guide#using-a-javascript-config-file">load config - v4</a></li>
+<li><a href="https://v3.tailwindcss.com/docs/installation/using-postcss">tailwindcss - v3</a></li>
 <li><a href="https://tailwindcss.com/docs/upgrade-guide#using-tailwind-cli">Using CLI(cmd) instead of tailwindcss(cmd)</a></li>
 <li><a href="https://tailwindcss.com/docs/styling-with-utility-classes#using-the-prefix-option">prefix - v4</a></li>
 <li><a href="https://github.com/tailwindlabs/tailwindcss/discussions/15755#discussioncomment-11932934">Use Tailwind v4 and Bootrstap 5 together -v4</a>:</li>

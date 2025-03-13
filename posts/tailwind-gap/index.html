@@ -1,0 +1,82 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.4.2"><title>间隙(gap) - 元素之间的间隔</title></head> <body> <h1>间隙(gap) - 元素之间的间隔</h1>  <p><em>Utilities for controlling gutters between grid and flexbox items.</em></p> <p>2025-03-12</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>gap-<number></number></td><td>gap: calc(var(—spacing) * <value>);</value></td></tr><tr><td>gap-(<custom-property>)</custom-property></td><td>gap: var(<custom-property>);</custom-property></td></tr><tr><td>gap-[<value>]</value></td><td>gap: <value>;</value></td></tr><tr><td>gap-x-<number></number></td><td>column-gap: calc(var(—spacing) * <value>);</value></td></tr><tr><td>gap-x-(<custom-property>)</custom-property></td><td>column-gap: var(<custom-property>);</custom-property></td></tr><tr><td>gap-x-[<value>]</value></td><td>column-gap: <value>;</value></td></tr><tr><td>gap-y-<number></number></td><td>row-gap: calc(var(—spacing) * <value>);</value></td></tr><tr><td>gap-y-(<custom-property>)</custom-property></td><td>row-gap: var(<custom-property>);</custom-property></td></tr><tr><td>gap-y-[<value>]</value></td><td>row-gap: <value>;</value></td></tr></tbody></table>
+<ul>
+<li>Basic example</li>
+<li>Changing row and column gaps independently</li>
+<li>Using a custom value</li>
+</ul>
+<h3 id="basic-example">Basic example</h3>
+<p>Use <code>gap-<number></number></code> utilities like <code>gap-2</code> and <code>gap-4</code> to
+change the gap between both rows and columns in grid and flexbox layouts:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="grid grid-cols-2 gap-4"></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>04&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="changing-row-and-column-gaps-independently">Changing row and column gaps independently</h3>
+<p>Use <code>gap-x-<number></number></code> or <code>gap-y-<number></number></code> utilities
+like <code>gap-x-8</code> and <code>gap-y-4</code> to change the gap between columns and rows independently:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="grid grid-cols-3 gap-x-8 gap-y-4"></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>04&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>05&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>06&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="using-a-custom-value">Using a custom value</h3>
+<p>Use utilities like <code>gap-[<value>]</value></code>,<code>gap-x-[<value>]</value></code>,
+and <code>gap-y-[<value>]</value></code> to set the gap based on a completely custom value:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="gap-[10vw] ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/gap">gap</a></li>
+<li><a href="https://tailwindcss.com/docs/gap#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
