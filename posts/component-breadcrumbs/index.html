@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.5.3"><title>breadcrumb - tailwindcss</title></head> <body> <h1>breadcrumb - tailwindcss</h1>  <p><em>breadcrumb</em></p> <p>2025-03-14</p> <p>Written by: tdtc</p> <h2 id="css">css</h2>
+<ul>
+<li>bootstrap</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;ol class="breadcrumb"></span></span>
+<span class="line"><span>    &#x3C;li class="breadcrumb-item">&#x3C;a href="https://localhost:5001/menu3">news&#x3C;/a>&#x3C;/li></span></span>
+<span class="line"><span>    &#x3C;li class="breadcrumb-item">&#x3C;a href="https://localhost:5001/Company/news">company news&#x3C;/a>&#x3C;/li></span></span>
+<span class="line"><span>    &#x3C;li class="breadcrumb-item active"></span></span>
+<span class="line"><span>        body</span></span>
+<span class="line"><span>    &#x3C;/li></span></span>
+<span class="line"><span>&#x3C;/ol></span></span></code></pre>
+<ul>
+<li>tailwindcss</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>  &#x3C;ol class="list-reset py-4 pl-4 rounded flex bg-grey-light text-grey items-center"></span></span>
+<span class="line"><span>    &#x3C;li class="px-2">&#x3C;a href="#" class="no-underline text-indigo">Home&#x3C;/a>&#x3C;/li></span></span>
+<span class="line"><span>    &#x3C;li>&#x3C;svg  class="w-6 h-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"></span></span>
+<span class="line"><span>&#x3C;path d="M8.21967 5.21967C8.51256 4.92678 8.98744 4.92678 9.28033 5.21967L13.5303 9.46967C13.8232 9.76256 13.8232 10.2374 13.5303 10.5303L9.28033 14.7803C8.98744 15.0732 8.51256 15.0732 8.21967 14.7803C7.92678 14.4874 7.92678 14.0126 8.21967 13.7197L11.9393 10L8.21967 6.28033C7.92678 5.98744 7.92678 5.51256 8.21967 5.21967Z" /></span></span>
+<span class="line"><span>&#x3C;/svg>&#x3C;/li></span></span>
+<span class="line"><span>    &#x3C;li class="px-2">&#x3C;a href="#" class="no-underline text-indigo">Library&#x3C;/a>&#x3C;/li></span></span>
+<span class="line"><span>    &#x3C;li>&#x3C;svg  class="w-6 h-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"></span></span>
+<span class="line"><span>&#x3C;path d="M8.21967 5.21967C8.51256 4.92678 8.98744 4.92678 9.28033 5.21967L13.5303 9.46967C13.8232 9.76256 13.8232 10.2374 13.5303 10.5303L9.28033 14.7803C8.98744 15.0732 8.51256 15.0732 8.21967 14.7803C7.92678 14.4874 7.92678 14.0126 8.21967 13.7197L11.9393 10L8.21967 6.28033C7.92678 5.98744 7.92678 5.51256 8.21967 5.21967Z" /></span></span>
+<span class="line"><span>&#x3C;/svg>&#x3C;/li></span></span>
+<span class="line"><span>    &#x3C;li class="px-2">Data&#x3C;/li></span></span>
+<span class="line"><span>  &#x3C;/ol></span></span></code></pre>
+<h2 id="bootstrap---v462">bootstrap - v4.6.2</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>.breadcrumb {</span></span>
+<span class="line"><span>  display: -ms-flexbox;</span></span>
+<span class="line"><span>  display: flex;</span></span>
+<span class="line"><span>  -ms-flex-wrap: wrap;</span></span>
+<span class="line"><span>  flex-wrap: wrap;</span></span>
+<span class="line"><span>  padding: 0.75rem 1rem;</span></span>
+<span class="line"><span>  margin-bottom: 1rem;</span></span>
+<span class="line"><span>  list-style: none;</span></span>
+<span class="line"><span>  background-color: #e9ecef;</span></span>
+<span class="line"><span>  border-radius: 0.25rem;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>.breadcrumb-item + .breadcrumb-item {</span></span>
+<span class="line"><span>  padding-left: 0.5rem;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>.breadcrumb-item + .breadcrumb-item::before {</span></span>
+<span class="line"><span>  float: left;</span></span>
+<span class="line"><span>  padding-right: 0.5rem;</span></span>
+<span class="line"><span>  color: #6c757d;</span></span>
+<span class="line"><span>  content: "/";</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>.breadcrumb-item + .breadcrumb-item:hover::before {</span></span>
+<span class="line"><span>  text-decoration: underline;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>.breadcrumb-item + .breadcrumb-item:hover::before {</span></span>
+<span class="line"><span>  text-decoration: none;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>.breadcrumb-item.active {</span></span>
+<span class="line"><span>  color: #6c757d;</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://play.tailwindcss.com/">online edit</a></li>
+<li><a href="https://codepen.io/jeroeng/pen/POdZEL">Tailwind CSS Breadcrumb - No special effects</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>

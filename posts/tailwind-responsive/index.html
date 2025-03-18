@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.4.2"><title>Responsive design</title></head> <body> <h1>Responsive design</h1>  <p><em>Using responsive utility variants to build adaptive user interfaces.</em></p> <p>2023-03-10</p> <p>Written by: tdtc</p> 
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.5.3"><title>Responsive design</title></head> <body> <h1>Responsive design</h1>  <p><em>Using responsive utility variants to build adaptive user interfaces.</em></p> <p>2023-03-18</p> <p>Written by: tdtc</p> 
 
 
 
@@ -34,7 +34,7 @@
 
 
 <table><thead><tr><th>Breakpoint prefix</th><th>Minimum width</th><th>CSS</th></tr></thead><tbody><tr><td>sm</td><td>40rem (640px)</td><td>@media (width >= 40rem) { … }</td></tr><tr><td>md</td><td>48rem (768px)</td><td>@media (width >= 48rem) { … }</td></tr><tr><td>lg</td><td>64rem (1024px)</td><td>@media (width >= 64rem) { … }</td></tr><tr><td>xl</td><td>80rem (1280px)</td><td>@media (width >= 80rem) { … }</td></tr><tr><td>2xl</td><td>96rem (1536px)</td><td>@media (width >= 96rem) { … }</td></tr></tbody></table>
-<h2 id="bootstrap-and-tailwindcss">bootstrap and Tailwindcss</h2>
+<h2 id="container">container</h2>
 
 
 
@@ -48,17 +48,57 @@
 
 
 
-<table><thead><tr><th>bootstrap</th><th>Tailwind</th></tr></thead><tbody><tr><td>container</td><td>@container</td></tr></tbody></table>
-<h2 id="basic-example">Basic example</h2>
-<p>Use the <code>@container</code> class to mark an element as a container,
-then use variants like <code>@sm</code> and <code>@md</code> to style child elements based on the size of the container:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="@container"></span></span>
-<span class="line"><span>  &#x3C;div class="flex flex-col @md:flex-row"></span></span>
-<span class="line"><span>    &#x3C;!-- ... --></span></span>
-<span class="line"><span>  &#x3C;/div></span></span>
-<span class="line"><span>&#x3C;/div></span></span></code></pre>
-<p>Just like breakpoint variants, container queries are mobile-first in Tailwind CSS and apply at the target container size and up.</p>
+
+
+
+
+
+
+
+
+<table><thead><tr><th>bootstrap</th><th>Tailwind</th></tr></thead><tbody><tr><td>width: 100%;</td><td>w-full</td></tr><tr><td>—bs-gutter-x: 1.5rem; <br> padding-right: calc(var(—bs-gutter-x) * .5); <br> padding-left: calc(var(—bs-gutter-x) * .5);</td><td>px-3</td></tr><tr><td>margin-right: auto; <br> margin-left: auto;</td><td>mx-auto</td></tr></tbody></table>
+<h3 id="putting-it-all-together">Putting it all together</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>bootstrap</th><th>Tailwind</th></tr></thead><tbody><tr><td>container</td><td>w-full px-3 mx-auto sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl xxl:max-w-xxl</td></tr><tr><td>container-sm</td><td>w-full px-3 mx-auto sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl xxl:max-w-xxl</td></tr><tr><td>container-md</td><td>w-full px-3 mx-auto md:max-w-md lg:max-w-lg xl:max-w-xl xxl:max-w-xxl</td></tr><tr><td>container-lg</td><td>w-full px-3 mx-auto lg:max-w-lg xl:max-w-xl xxl:max-w-xxl</td></tr><tr><td>container-xl</td><td>w-full px-3 mx-auto xl:max-w-xl xxl:max-w-xxl</td></tr><tr><td>container-xxl</td><td>w-full px-3 mx-auto xxl:max-w-xxl</td></tr><tr><td>container-fluid</td><td>w-full px-3 mx-auto</td></tr></tbody></table>
 <h2 id="ref">Ref</h2>
 <ul>
 <li><a href="https://tailwindcss.com/docs/responsive-design">Responsive design</a></li>
+<li><a href="https://github.com/tailwindlabs/tailwindcss/discussions/9140">Tailwind container meet bootstrap ones?</a></li>
+<li><a href="https://play.tailwindcss.com/L52JvxVCMF">container - example</a></li>
 </ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
