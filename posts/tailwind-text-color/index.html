@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.5.5"><title>text color</title></head> <body> <h1>text color</h1>  <p><em>Utilities for controlling the text color of an element.</em></p> <p>2025-03-28</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>text-inherit</td><td>color: inherit;</td></tr><tr><td>text-current</td><td>color: currentColor;</td></tr><tr><td>text-transparent</td><td>color: transparent;</td></tr><tr><td>text-black</td><td>color: var(—color-black); /* #000 */</td></tr><tr><td>text-white</td><td>color: var(—color-white); /* #fff */</td></tr><tr><td>text-(<custom-property>)</custom-property></td><td>color: var(<custom-property>);</custom-property></td></tr><tr><td>text-[<value>]</value></td><td>color: <value>;</value></td></tr></tbody></table>
+<h4 id="intensity">intensity</h4>
+<p>see <a href="https://tdtc-hrb.github.io/css-tws/posts/tailwind-colors">colors</a></p>
+<h3 id="basic-example">Basic example</h3>
+<p>Use utilities like <code>text-blue-600</code> and <code>text-sky-400</code> to control the text color of an element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;p class="text-blue-600 dark:text-sky-400">The quick brown fox...&#x3C;/p></span></span></code></pre>
+<h3 id="changing-the-opacity">Changing the opacity</h3>
+<p>Use the color opacity modifier to control the text color opacity of an element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;p class="text-blue-600/100 dark:text-sky-400/100">The quick brown fox...&#x3C;/p></span></span>
+<span class="line"><span>&#x3C;p class="text-blue-600/75 dark:text-sky-400/75">The quick brown fox...&#x3C;/p></span></span>
+<span class="line"><span>&#x3C;p class="text-blue-600/50 dark:text-sky-400/50">The quick brown fox...&#x3C;/p></span></span>
+<span class="line"><span>&#x3C;p class="text-blue-600/25 dark:text-sky-400/25">The quick brown fox...&#x3C;/p></span></span></code></pre>
+<h3 id="using-a-custom-value">Using a custom value</h3>
+<p>Use the <code>text-[<value>]</value></code> syntax to set the text color based on a completely custom value:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;p class="text-[#50d71e] ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/p></span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/color">text color</a></li>
+<li><a href="https://tailwindcss.com/docs/color#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
