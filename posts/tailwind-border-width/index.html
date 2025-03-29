@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.5.5"><title>border width</title></head> <body> <h1>border width</h1>  <p><em>Utilities for controlling the width of an element&#39;s borders.</em></p> <p>2025-03-29</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>border</td><td>border-width: 1px;</td></tr><tr><td>border-<number></number></td><td>border-width: <number>px;</number></td></tr><tr><td>border-(length:<custom-property>)</custom-property></td><td>border-width: var(<custom-property>);</custom-property></td></tr><tr><td>border-[<value>]</value></td><td>border-width: <value>;</value></td></tr></tbody></table>
+<h4 id="the-meaning-of-the-letters">The meaning of the letters</h4>
+<ul>
+<li>x</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>inline</span></span></code></pre>
+<ul>
+<li>y</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>block</span></span></code></pre>
+<ul>
+<li>s</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>inline-start</span></span></code></pre>
+<ul>
+<li>e</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>inline-end</span></span></code></pre>
+<ul>
+<li>t</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>top</span></span></code></pre>
+<ul>
+<li>r</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>right</span></span></code></pre>
+<ul>
+<li>b</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>bottom</span></span></code></pre>
+<ul>
+<li>l</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>left</span></span></code></pre>
+<h4 id="between-children">Between children</h4>
+<ul>
+<li>x</li>
+<li>y</li>
+<li>x-reverse</li>
+<li>y-reverse</li>
+</ul>
+<h3 id="basic-example">Basic example</h3>
+<p>Use border or <code>border-<number></number></code> utilities like <code>border-2</code> and <code>border-4</code> to
+set the border width for all sides of an element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="border border-indigo-600 ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="border-2 border-indigo-600 ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="border-4 border-indigo-600 ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="border-8 border-indigo-600 ...">&#x3C;/div></span></span></code></pre>
+<h3 id="individual-sides">Individual sides</h3>
+<p>Use utilities like <code>border-r</code> and <code>border-t-4</code> to set the border width for one side of an element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="border-t-4 border-indigo-500 ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="border-r-4 border-indigo-500 ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="border-b-4 border-indigo-500 ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="border-l-4 border-indigo-500 ...">&#x3C;/div></span></span></code></pre>
+<h3 id="horizontal-and-vertical-sides">Horizontal and vertical sides</h3>
+<p>Use utilities like <code>border-x</code> and <code>border-y-4</code> to set the border width on
+two sides of an element at the same time:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="border-x-4 border-indigo-500 ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="border-y-4 border-indigo-500 ...">&#x3C;/div></span></span></code></pre>
+<h3 id="using-logical-properties">Using logical properties</h3>
+<p>Use utilities like <code>border-s</code> and <code>border-e-4</code>
+to set the <code>border-inline-start-width</code> and <code>border-inline-end-width</code> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts">logical properties</a>,
+which map to either the left or right border based on the text direction:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div dir="ltr"></span></span>
+<span class="line"><span>  &#x3C;div class="border-s-4 ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div dir="rtl"></span></span>
+<span class="line"><span>  &#x3C;div class="border-s-4 ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="between-children-1">Between children</h3>
+<p>Use utilities like <code>divide-x</code> and <code>divide-y-4</code> to add borders between child elements:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="grid grid-cols-3 divide-x-4"></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h4 id="reversing-children-order">Reversing children order</h4>
+<p>If your elements are in reverse order (using say <code>flex-row-reverse</code> or <code>flex-col-reverse</code>),
+use the <code>divide-x-reverse</code> or <code>divide-y-reverse</code> utilities to ensure the border is added to the correct side of each element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="flex flex-col-reverse divide-y-4 divide-y-reverse divide-gray-200"></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="using-a-custom-value">Using a custom value</h3>
+<p>Use the <code>border-[<value>]</value></code> syntax to set the border width based on a completely custom value:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="border-[2vw] ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/border-width">border width</a></li>
+<li><a href="https://tailwindcss.com/docs/border-width#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>

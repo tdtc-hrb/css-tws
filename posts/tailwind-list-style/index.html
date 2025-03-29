@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.5.5"><title>list-style-type</title></head> <body> <h1>list-style-type</h1>  <p><em>Utilities for controlling the marker style of a list.</em></p> <p>2025-03-29</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>list-disc</td><td>list-style-type: disc;</td></tr><tr><td>list-decimal</td><td>list-style-type: decimal;</td></tr><tr><td>list-none</td><td>list-style-type: none;</td></tr><tr><td>list-(<custom-property>)</custom-property></td><td>list-style-type: var(<custom-property>);</custom-property></td></tr><tr><td>list-[<value>]</value></td><td>list-style-type: <value>;</value></td></tr><tr><td>list-(<custom-property>)</custom-property></td><td>list-style-type: var(<custom-property>);</custom-property></td></tr><tr><td>list-[<value>]</value></td><td>list-style-type: <value>;</value></td></tr></tbody></table>
+<h4 id="list-reset"><a href="https://v1.tailwindcss.com/docs/upgrading-to-v1#8-remove-any-usage-of-list-reset">list-reset</a></h4>
+<p>Please use “none” to replace:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>list-none</span></span></code></pre>
+<h3 id="basic-example">Basic example</h3>
+<p>Use utilities like <code>list-disc</code> and <code>list-decimal</code> to control the style of the markers in a list:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;ul class="list-disc"></span></span>
+<span class="line"><span>  &#x3C;li>Now this is a story all about how, my life got flipped-turned upside down&#x3C;/li></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/ul></span></span>
+<span class="line"><span>&#x3C;ol class="list-decimal"></span></span>
+<span class="line"><span>  &#x3C;li>Now this is a story all about how, my life got flipped-turned upside down&#x3C;/li></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/ol></span></span>
+<span class="line"><span>&#x3C;ul class="list-none"></span></span>
+<span class="line"><span>  &#x3C;li>Now this is a story all about how, my life got flipped-turned upside down&#x3C;/li></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/ul></span></span></code></pre>
+<h3 id="using-a-custom-value">Using a custom value</h3>
+<p>Use the <code>list-[<value>]</value></code> syntax to set the marker based on a completely custom value:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;ol class="list-[upper-roman] ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/ol></span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/list-style-type">style of a list</a></li>
+<li><a href="https://tailwindcss.com/docs/list-style-type#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
