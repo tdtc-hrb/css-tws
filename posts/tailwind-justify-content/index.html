@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.5.5"><title>justify content</title></head> <body> <h1>justify content</h1>  <p><em>Utilities for controlling how flex and grid items are positioned along a container&#39;s main axis.</em></p> <p>2025-03-29</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>justify-start</td><td>justify-content: flex-start;</td></tr><tr><td>justify-end</td><td>justify-content: flex-end;</td></tr><tr><td>justify-center</td><td>justify-content: center;</td></tr><tr><td>justify-between</td><td>justify-content: space-between;</td></tr><tr><td>justify-around</td><td>justify-content: space-around;</td></tr><tr><td>justify-evenly</td><td>justify-content: space-evenly;</td></tr><tr><td>justify-stretch</td><td>justify-content: stretch;</td></tr><tr><td>justify-baseline</td><td>justify-content: baseline;</td></tr><tr><td>justify-normal</td><td>justify-content: normal;</td></tr></tbody></table>
+<h3 id="start">Start</h3>
+<p>Use <code>justify-start</code> to justify items against the start of the container’s main axis:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="flex justify-start ..."></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="center">Center</h3>
+<p>Use <code>justify-center</code> to justify items along the center of the container’s main axis:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="flex justify-center ..."></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="end">End</h3>
+<p>Use <code>justify-end</code> to justify items against the end of the container’s main axis:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="flex justify-end ..."></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="space-between">Space between</h3>
+<p>Use <code>justify-between</code> to justify items along the container’s main axis
+such that there is an equal amount of space between each item:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="flex justify-between ..."></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="space-around">Space around</h3>
+<p>Use <code>justify-around</code> to justify items along the container’s main axis
+such that there is an equal amount of space on each side of each item:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="flex justify-around ..."></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="space-evenly">Space evenly</h3>
+<p>Use <code>justify-evenly</code> to justify items along the container’s main axis
+such that there is an equal amount of space around each item,
+but also accounting for the doubling of space you would normally see between
+each item when using <code>justify-around</code>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="flex justify-evenly ..."></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="stretch">Stretch</h3>
+<p>Use <code>justify-stretch</code> to allow content items to fill the available space along the container’s main axis:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="flex justify-stretch ..."></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="normal">Normal</h3>
+<p>Use <code>justify-normal</code> to pack content items in their
+default position as if no <code>justify-content</code> value was set:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="flex justify-normal ..."></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/justify-content">justify content</a></li>
+<li><a href="https://tailwindcss.com/docs/justify-content#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
