@@ -1,16 +1,11 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.5.5"><title>dropdown - tailwindcss</title></head> <body> <h1>dropdown - tailwindcss</h1>  <p><em>dropdown</em></p> <p>2025-03-12</p> <p>Written by: tdtc</p> <h2 id="script">script</h2>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;script></span></span>
-<span class="line"><span>    function toggleDropdown(divid) {</span></span>
-<span class="line"><span>        var dropdown = document.getElementById(divid);</span></span>
-<span class="line"><span>        dropdown.classList.toggle('hidden');</span></span>
-<span class="line"><span>    }</span></span>
-<span class="line"><span>&#x3C;/script></span></span></code></pre>
-<h2 id="css">css</h2>
-<ul>
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.5.5"><title>dropdown - tailwindcss</title></head> <body> <h1>dropdown - tailwindcss</h1>  <p><em>dropdown</em></p> <p>2025-03-29</p> <p>Written by: tdtc</p> <ul>
 <li>bootstrap</li>
 </ul>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>        &#x3C;li class="nav-item dropdown"></span></span>
-<span class="line"><span>            &#x3C;a class="nav-link" href="#">About&#x3C;/a></span></span>
+<blockquote>
+<p>v4.6.2</p>
+</blockquote>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>        &#x3C;li class="dropdown"></span></span>
+<span class="line"><span>            &#x3C;a  href="#">About&#x3C;/a></span></span>
 <span class="line"><span>            &#x3C;div class="dropdown-menu"></span></span>
 <span class="line"><span>                &#x3C;a class="dropdown-item" href="https://localhost:5001/About/profile">profile&#x3C;/a></span></span>
 <span class="line"><span>                &#x3C;a class="dropdown-item" href="https://localhost:5001/About/innovations">innovations&#x3C;/a></span></span>
@@ -20,71 +15,48 @@
 <ul>
 <li>tailwindcss</li>
 </ul>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;li class="relative"></span></span>
-<span class="line"><span>    &#x3C;a class="inline-flex items-center px-4 py-2 hover:bg-gray-100" href="#" onclick="toggleDropdown('dropdown1')"></span></span>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;!doctype html></span></span>
+<span class="line"><span>&#x3C;html></span></span>
+<span class="line"><span>&#x3C;head></span></span>
+<span class="line"><span>  &#x3C;meta charset="utf-8"></span></span>
+<span class="line"><span>  &#x3C;script src="https://unpkg.com/@tailwindcss/browser@4">&#x3C;/script></span></span>
+<span class="line"><span>&#x3C;/head></span></span>
+<span class="line"><span>&#x3C;body></span></span>
+<span class="line"><span>&#x3C;li class="relative"></span></span>
+<span class="line"><span>    &#x3C;a class="inline-flex items-center px-4 py-2" href="#" onclick="toggleDropdown('dropdown1')"></span></span>
 <span class="line"><span>        About1</span></span>
-<span class="line"><span>        &#x3C;svg class="w-5 h-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"></span></span>
+<span class="line"><span>        &#x3C;svg class="w-5 h-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor"></span></span>
 <span class="line"><span>            &#x3C;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 10l5 5 5-5H7z"/></span></span>
 <span class="line"><span>        &#x3C;/svg></span></span>
 <span class="line"><span>    &#x3C;/a></span></span>
-<span class="line"><span>    &#x3C;div class="absolute hidden bg-white rounded-md shadow-lg  group-hover:block" id="dropdown1"></span></span>
-<span class="line"><span>        &#x3C;a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="https://localhost:5001/About/profile">profile&#x3C;/a></span></span>
-<span class="line"><span>        &#x3C;a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="https://localhost:5001/About/innovations">innovations&#x3C;/a></span></span>
-<span class="line"><span>        &#x3C;a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="https://localhost:5001/About/qualifications">qualifications&#x3C;/a></span></span>
+<span class="line"><span>    &#x3C;div class="absolute left-0 z-50 float-left hidden py-2 mt-1 text-base bg-white border border-gray-300 rounded group-hover:block" id="dropdown1"></span></span>
+<span class="line"><span>        &#x3C;a class="block w-full py-1 px-6 font-normal text-gray-900 whitespace-no-wrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/profile">profile&#x3C;/a></span></span>
+<span class="line"><span>        &#x3C;a class="block w-full py-1 px-6 font-normal text-gray-900 whitespace-no-wrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/innovations">innovations&#x3C;/a></span></span>
+<span class="line"><span>        &#x3C;a class="block w-full py-1 px-6 font-normal text-gray-900 whitespace-no-wrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/qualifications">qualifications&#x3C;/a></span></span>
 <span class="line"><span>    &#x3C;/div></span></span>
-<span class="line"><span>&#x3C;/li></span></span></code></pre>
-<h3 id="svg">svg</h3>
-<p>需要设置:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>inline-flex items-center</span></span></code></pre>
-<p>以取代</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>block</span></span></code></pre>
-<h2 id="bootstrap---v462">bootstrap - v4.6.2</h2>
-<ul>
-<li>nav-link</li>
-</ul>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>.nav-link {</span></span>
-<span class="line"><span>  display: block;</span></span>
-<span class="line"><span>  padding: 0.5rem 1rem;</span></span>
-<span class="line"><span>}</span></span></code></pre>
+<span class="line"><span>&#x3C;/li></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#x3C;script></span></span>
+<span class="line"><span>    function toggleDropdown(divid) {</span></span>
+<span class="line"><span>        var dropdown = document.getElementById(divid);</span></span>
+<span class="line"><span>        dropdown.classList.toggle('hidden');</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>&#x3C;/script></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#x3C;/body></span></span>
+<span class="line"><span>&#x3C;/html></span></span></code></pre>
+<h3 id="dropdown">dropdown</h3>
 <ul>
 <li>dropdown-item</li>
 </ul>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>.dropdown-item {</span></span>
-<span class="line"><span>  display: block;</span></span>
-<span class="line"><span>  width: 100%;</span></span>
-<span class="line"><span>  padding: 0.25rem 1.5rem;</span></span>
-<span class="line"><span>  clear: both;</span></span>
-<span class="line"><span>  font-weight: 400;</span></span>
-<span class="line"><span>  color: #212529;</span></span>
-<span class="line"><span>  text-align: inherit;</span></span>
-<span class="line"><span>  white-space: nowrap;</span></span>
-<span class="line"><span>  background-color: transparent;</span></span>
-<span class="line"><span>  border: 0;</span></span>
-<span class="line"><span>}</span></span></code></pre>
-<h3 id="nav-item">nav-item</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>block w-full py-1 px-6 font-normal text-gray-900 whitespace-no-wrap border-0</span></span></code></pre>
 <ul>
-<li>nav-fill</li>
+<li>dropdown-menu</li>
 </ul>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>.nav-fill > .nav-link,</span></span>
-<span class="line"><span>.nav-fill .nav-item {</span></span>
-<span class="line"><span>  -ms-flex: 1 1 auto;</span></span>
-<span class="line"><span>  flex: 1 1 auto;</span></span>
-<span class="line"><span>  text-align: center;</span></span>
-<span class="line"><span>}</span></span></code></pre>
-<ul>
-<li>nav-justified</li>
-</ul>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>.nav-justified > .nav-link,</span></span>
-<span class="line"><span>.nav-justified .nav-item {</span></span>
-<span class="line"><span>  -ms-flex-preferred-size: 0;</span></span>
-<span class="line"><span>  flex-basis: 0;</span></span>
-<span class="line"><span>  -ms-flex-positive: 1;</span></span>
-<span class="line"><span>  flex-grow: 1;</span></span>
-<span class="line"><span>  text-align: center;</span></span>
-<span class="line"><span>}</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>absolute left-0 z-50 float-left hidden py-2 mt-1 text-base bg-white border border-gray-300 rounded</span></span></code></pre>
 <h2 id="ref">Ref</h2>
 <ul>
-<li><a href="https://www.docuwriter.ai/bootstrap-to-tailwindcss-code-converter">bs to tw</a></li>
+<li><a href="https://github.com/awssat/tailwindo/blob/master/src/Framework/BootstrapFramework.php#L639">dropdown - tailwindo</a></li>
 <li><a href="https://tailwindcss.com/docs/align-items#center">items-center</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">Element: classList property</a></li>
 <li><a href="https://www.w3schools.com/howto/howto_js_dropdown.asp">How TO - Clickable Dropdown</a></li>
