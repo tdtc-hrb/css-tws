@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.5.5"><title>grid template columns</title></head> <body> <h1>grid template columns</h1>  <p><em>Utilities for specifying the columns in a grid layout.</em></p> <p>2025-03-29</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>grid-cols-<number></number></td><td>grid-template-columns: repeat(<number>, minmax(0, 1fr));</number></td></tr><tr><td>grid-cols-none</td><td>grid-template-columns: none;</td></tr><tr><td>grid-cols-subgrid</td><td>grid-template-columns: subgrid;</td></tr><tr><td>grid-cols-[<value>]</value></td><td>grid-template-columns: <value>;</value></td></tr><tr><td>grid-cols-(<custom-property>)</custom-property></td><td>grid-template-columns: var(<custom-property>);</custom-property></td></tr></tbody></table>
+<h3 id="specifying-the-grid-columns">Specifying the grid columns</h3>
+<p>Use <code>grid-cols-<number></number></code> utilities like <code>grid-cols-2</code>
+and <code>grid-cols-4</code> to create grids with n equally sized columns:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="grid grid-cols-4 gap-4"></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>  &#x3C;div>09&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="implementing-a-subgrid">Implementing a subgrid</h3>
+<p>Use the <code>grid-cols-subgrid</code> utility to adopt the column tracks defined by the item’s parent:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="grid grid-cols-4 gap-4"></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>  &#x3C;div>05&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div class="col-span-3 grid grid-cols-subgrid gap-4"></span></span>
+<span class="line"><span>    &#x3C;div class="col-start-2">06&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="using-a-custom-value">Using a custom value</h3>
+<p>Use the <code>grid-cols-[<value>]</value></code> syntax to set the columns based on a completely custom value:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="grid-cols-[200px_minmax(900px,_1fr)_100px] ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/grid-template-columns">grid template columns</a></li>
+<li><a href="https://tailwindcss.com/docs/grid-template-columns#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
