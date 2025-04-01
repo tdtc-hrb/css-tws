@@ -23,13 +23,15 @@
 <span class="line"><span>&#x3C;/head></span></span>
 <span class="line"><span>&#x3C;body></span></span>
 <span class="line"><span>&#x3C;li class="relative"></span></span>
-<span class="line"><span>    &#x3C;a class="inline-flex items-center px-4 py-2" href="#" onclick="toggleDropdown('dropdown1')"></span></span>
-<span class="line"><span>        About1</span></span>
-<span class="line"><span>        &#x3C;svg class="w-5 h-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor"></span></span>
+<span class="line"><span>    &#x3C;div class="flex-col" style="cursor:pointer"></span></span>
+<span class="line"><span>        &#x3C;a class="inline-flex items-center px-4 py-2" href="#" onclick="toggleDropdown()"></span></span>
+<span class="line"><span>            About1</span></span>
+<span class="line"><span>        &#x3C;/a></span></span>
+<span class="line"><span>        &#x3C;svg class="w-5 h-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" onclick="toggleDropdown()"></span></span>
 <span class="line"><span>            &#x3C;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 10l5 5 5-5H7z"/></span></span>
 <span class="line"><span>        &#x3C;/svg></span></span>
-<span class="line"><span>    &#x3C;/a></span></span>
-<span class="line"><span>    &#x3C;div class="absolute left-0 z-50 float-left hidden py-2 mt-1 text-base bg-white border border-gray-300 rounded group-hover:block" id="dropdown1"></span></span>
+<span class="line"><span>    &#x3C;/div></span></span>
+<span class="line"><span>    &#x3C;div class="absolute left-0 z-50 float-left hidden py-2 mt-1 text-base bg-white border border-gray-300 rounded group-hover:block"></span></span>
 <span class="line"><span>        &#x3C;a class="block w-full py-1 px-6 font-normal text-gray-900 whitespace-no-wrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/profile">profile&#x3C;/a></span></span>
 <span class="line"><span>        &#x3C;a class="block w-full py-1 px-6 font-normal text-gray-900 whitespace-no-wrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/innovations">innovations&#x3C;/a></span></span>
 <span class="line"><span>        &#x3C;a class="block w-full py-1 px-6 font-normal text-gray-900 whitespace-no-wrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/qualifications">qualifications&#x3C;/a></span></span>
@@ -37,9 +39,22 @@
 <span class="line"><span>&#x3C;/li></span></span>
 <span class="line"><span></span></span>
 <span class="line"><span>&#x3C;script></span></span>
-<span class="line"><span>    function toggleDropdown(divid) {</span></span>
-<span class="line"><span>        var dropdown = document.getElementById(divid);</span></span>
-<span class="line"><span>        dropdown.classList.toggle('hidden');</span></span>
+<span class="line"><span>    function toggleDown(element) {</span></span>
+<span class="line"><span>        // Prevent exception: captured element is svg</span></span>
+<span class="line"><span>        if (element.nodeName != 'svg')</span></span>
+<span class="line"><span>            element.classList.toggle('hidden');</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    function toggleDropdown() {</span></span>
+<span class="line"><span>        const parentElement = event.target.parentNode.parentNode;</span></span>
+<span class="line"><span>        const element = parentElement.children[1];</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        console.log(element.nodeName);</span></span>
+<span class="line"><span>        toggleDown(element);</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        setTimeout(() => {</span></span>
+<span class="line"><span>            toggleDown(element);</span></span>
+<span class="line"><span>        }, 2000);</span></span>
 <span class="line"><span>    }</span></span>
 <span class="line"><span>&#x3C;/script></span></span>
 <span class="line"><span></span></span>
