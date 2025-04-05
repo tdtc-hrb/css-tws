@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>float</title></head> <body> <h1>float</h1>  <p><em>Utilities for controlling the wrapping of content around an element.</em></p> <p>2025-04-05</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>float-right</td><td>float: right;</td></tr><tr><td>float-left</td><td>float: left;</td></tr><tr><td>float-start</td><td>float: inline-start;</td></tr><tr><td>float-end</td><td>float: inline-end;</td></tr><tr><td>float-none</td><td>float: none;</td></tr></tbody></table>
+<h3 id="floating-elements-to-the-right">Floating elements to the right</h3>
+<p>Use the <code>float-right</code> utility to float an element to the right of its container:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;article></span></span>
+<span class="line"><span>  &#x3C;img class="float-right ..." src="/img/mountains.jpg" /></span></span>
+<span class="line"><span>  &#x3C;p>Maybe we can live without libraries, people like you and me. ...&#x3C;/p></span></span>
+<span class="line"><span>&#x3C;/article></span></span></code></pre>
+<h3 id="floating-elements-to-the-left">Floating elements to the left</h3>
+<p>Use the <code>float-left</code> utility to float an element to the left of its container:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;article></span></span>
+<span class="line"><span>  &#x3C;img class="float-left ..." src="/img/mountains.jpg" /></span></span>
+<span class="line"><span>  &#x3C;p>Maybe we can live without libraries, people like you and me. ...&#x3C;/p></span></span>
+<span class="line"><span>&#x3C;/article></span></span></code></pre>
+<h3 id="using-logical-properties">Using logical properties</h3>
+<p>Use the <code>float-start</code> and <code>float-end</code> utilities,
+which use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts">logical properties</a> to map to either the left or right side based on the text direction:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;article></span></span>
+<span class="line"><span>  &#x3C;img class="float-start ..." src="/img/mountains.jpg" /></span></span>
+<span class="line"><span>  &#x3C;p>Maybe we can live without libraries, people like you and me. ...&#x3C;/p></span></span>
+<span class="line"><span>&#x3C;/article></span></span>
+<span class="line"><span>&#x3C;article dir="rtl"></span></span>
+<span class="line"><span>  &#x3C;img class="float-start ..." src="/img/mountains.jpg" /></span></span>
+<span class="line"><span>  &#x3C;p>... ربما يمكننا العيش بدون مكتبات، أشخاص مثلي ومثلك. ربما. بالتأكيد&#x3C;/p></span></span>
+<span class="line"><span>&#x3C;/article></span></span></code></pre>
+<h3 id="disabling-a-float">Disabling a float</h3>
+<p>Use the <code>float-none</code> utility to reset any floats that are applied to an element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;article></span></span>
+<span class="line"><span>  &#x3C;img class="float-none ..." src="/img/mountains.jpg" /></span></span>
+<span class="line"><span>  &#x3C;p>Maybe we can live without libraries, people like you and me. ...&#x3C;/p></span></span>
+<span class="line"><span>&#x3C;/article></span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/float">float</a></li>
+<li><a href="https://tailwindcss.com/docs/float#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>

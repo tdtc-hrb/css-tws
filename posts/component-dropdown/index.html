@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.5.6"><title>dropdown - tailwindcss</title></head> <body> <h1>dropdown - tailwindcss</h1>  <p><em>dropdown</em></p> <p>2025-04-04</p> <p>Written by: tdtc</p> <ul>
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>dropdown - tailwindcss</title></head> <body> <h1>dropdown - tailwindcss</h1>  <p><em>dropdown</em></p> <p>2025-04-05</p> <p>Written by: tdtc</p> <ul>
 <li>bootstrap</li>
 </ul>
 <blockquote>
@@ -32,9 +32,9 @@
 <span class="line"><span>        &#x3C;/svg></span></span>
 <span class="line"><span>    &#x3C;/div></span></span>
 <span class="line"><span>    &#x3C;div class="absolute left-0 z-50 float-left hidden py-2 mt-1 text-base bg-white border border-gray-300 rounded group-hover:block"></span></span>
-<span class="line"><span>        &#x3C;a class="block w-full py-1 px-6 font-normal text-gray-900 whitespace-nowrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/profile">profile&#x3C;/a></span></span>
-<span class="line"><span>        &#x3C;a class="block w-full py-1 px-6 font-normal text-gray-900 whitespace-nowrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/innovations">innovations&#x3C;/a></span></span>
-<span class="line"><span>        &#x3C;a class="block w-full py-1 px-6 font-normal text-gray-900 whitespace-nowrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/qualifications">qualifications&#x3C;/a></span></span>
+<span class="line"><span>        &#x3C;a class="block py-1 px-6 font-normal text-gray-900 whitespace-nowrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/profile">profile&#x3C;/a></span></span>
+<span class="line"><span>        &#x3C;a class="block py-1 px-6 font-normal text-gray-900 whitespace-nowrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/innovations">innovations&#x3C;/a></span></span>
+<span class="line"><span>        &#x3C;a class="block py-1 px-6 font-normal text-gray-900 whitespace-nowrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/qualifications">qualifications&#x3C;/a></span></span>
 <span class="line"><span>    &#x3C;/div></span></span>
 <span class="line"><span>&#x3C;/li></span></span>
 <span class="line"><span></span></span>
@@ -60,15 +60,19 @@
 <span class="line"><span></span></span>
 <span class="line"><span>&#x3C;/body></span></span>
 <span class="line"><span>&#x3C;/html></span></span></code></pre>
-<h3 id="dropdown">dropdown</h3>
+<h3 id="w-full">w-full</h3>
+<p>在特定的环境下会出现溢出的情况<br>
+<a href="https://play.tailwindcss.com/Hqp9d5Ersu">Background length overflow on hover</a></p>
+<p>删除即可解决</p>
+<h3 id="dropdown---v01">dropdown - v0.1</h3>
 <ul>
 <li>dropdown-item</li>
 </ul>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>block w-full py-1 px-6 font-normal text-gray-900 whitespace-nowrap border-0</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>block w-full py-1 px-6 font-normal text-gray-900 whitespace-no-wrap border-0</span></span></code></pre>
 <ul>
 <li>dropdown-menu</li>
 </ul>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>absolute left-0 z-50 float-left hidden py-2 mt-1 text-base bg-white border border-gray-300 rounded</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>absolute left-0 z-50 float-left hidden list-reset py-2 mt-1 text-base bg-white border border-gray-300 rounded</span></span></code></pre>
 <h2 id="ref">Ref</h2>
 <ul>
 <li><a href="https://tailwindcss.com/docs/upgrade-guide">to v4</a></li>
