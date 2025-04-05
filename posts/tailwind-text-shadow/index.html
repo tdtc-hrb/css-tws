@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>text shadow</title></head> <body> <h1>text shadow</h1>  <p><em>Utilities for controlling the shadow of a text element.</em></p> <p>2025-04-06</p> <p>Written by: tdtc</p> <p>April 3, 2025</p>
+<p>Tailwind CSS v4.1: Text shadows, masks, and tons more</p>
+<p>I wasn’t sure it would ever happen but we did it — we released a version of Tailwind CSS that includes text-shadow utilities.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>text-shadow-2xs</td><td>text-shadow: var(—text-shadow-2xs);</td></tr><tr><td>text-shadow-xs</td><td>text-shadow: var(—text-shadow-xs);</td></tr><tr><td>text-shadow-sm</td><td>text-shadow: var(—text-shadow-sm);</td></tr><tr><td>text-shadow-md</td><td>text-shadow: var(—text-shadow-md);</td></tr><tr><td>text-shadow-lg</td><td>text-shadow: var(—text-shadow-lg);</td></tr><tr><td>text-shadow-none</td><td>text-shadow: none;</td></tr><tr><td>text-shadow-(<custom-property>)</custom-property></td><td>text-shadow: var(<custom-property>);</custom-property></td></tr><tr><td>text-shadow-(color:<custom-property>)</custom-property></td><td>—tw-shadow-color var(<custom-property>);</custom-property></td></tr><tr><td>text-shadow-[<value>]</value></td><td>text-shadow: <value>;</value></td></tr><tr><td>text-shadow-inherit</td><td>—tw-shadow-color inherit;</td></tr><tr><td>text-shadow-current</td><td>—tw-shadow-color currentColor;</td></tr><tr><td>text-shadow-transparent</td><td>—tw-shadow-color transparent;</td></tr></tbody></table>
+<h3 id="basic-example">Basic example</h3>
+<p>Use utilities like <code>text-shadow-sm</code> and <code>shadow-lg</code> to apply different sized text shadows to a text element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;p class="text-shadow-2xs ...">The quick brown fox...&#x3C;/p></span></span>
+<span class="line"><span>&#x3C;p class="text-shadow-xs ...">The quick brown fox...&#x3C;/p></span></span>
+<span class="line"><span>&#x3C;p class="text-shadow-sm ...">The quick brown fox...&#x3C;/p></span></span>
+<span class="line"><span>&#x3C;p class="text-shadow-md ...">The quick brown fox...&#x3C;/p></span></span>
+<span class="line"><span>&#x3C;p class="text-shadow-lg ...">The quick brown fox...&#x3C;/p></span></span></code></pre>
+<h3 id="changing-the-opacity">Changing the opacity</h3>
+<p>Use the opacity modifier to adjust the opacity of the text shadow:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;p class="text-shadow-lg ...">The quick brown fox...&#x3C;/p></span></span>
+<span class="line"><span>&#x3C;p class="text-shadow-lg/20 ...">The quick brown fox...&#x3C;/p></span></span>
+<span class="line"><span>&#x3C;p class="text-shadow-lg/30 ...">The quick brown fox...&#x3C;/p></span></span></code></pre>
+<p>The default text shadow opacities are quite low (20% or less),
+so increasing the opacity (to like 50%) will make the text shadows more pronounced.</p>
+<h3 id="setting-the-shadow-color">Setting the shadow color</h3>
+<p>Use utilities like <code>text-shadow-indigo-500</code> and <code>text-shadow-cyan-500/50</code> to change the color of a text shadow:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;button class="text-sky-950 text-shadow-2xs text-shadow-sky-300 ...">Book a demo&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;button class="text-gray-950 dark:text-white dark:text-shadow-2xs ...">See pricing&#x3C;/button></span></span></code></pre>
+<p>By default colored shadows have an opacity of 100% but you can adjust this using the opacity modifier.</p>
+<h3 id="removing-a-text-shadow">Removing a text shadow</h3>
+<p>Use the <code>text-shadow-none</code> utility to remove an existing text shadow from an element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;p class="text-shadow-lg dark:text-shadow-none"></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/p></span></span></code></pre>
+<h3 id="using-a-custom-value">Using a custom value</h3>
+<p>Use the <code>text-shadow-[<value>]</value></code> syntax to set the text shadow based on a completely custom value:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;p class="text-shadow-[0_35px_35px_rgb(0_0_0_/_0.25)] ..."></span></span>
+<span class="line"><span>  Lorem ipsum dolor sit amet...</span></span>
+<span class="line"><span>&#x3C;/p></span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/text-shadow">text shadow</a></li>
+<li><a href="https://tailwindcss.com/docs/text-shadow#responsive-design">Responsive design</a></li>
+<li><a href="https://tailwindcss.com/blog/tailwindcss-v4-1">Tailwind CSS v4.1: Text shadows</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
