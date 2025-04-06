@@ -1,4 +1,30 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>CSS选择器</title></head> <body> <h1>CSS选择器</h1>  <p><em>元素, 属性选择器, 奇偶选择器</em></p> <p>2022-04-10</p> <p>Written by: tdtc</p> 
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>CSS选择器</title></head> <body> <h1>CSS选择器</h1>  <p><em>关系选择器, 选择器</em></p> <p>2025-04-06</p> <p>Written by: tdtc</p> <h1 id="combinators"><a href="https://www.w3schools.com/cssref/css_ref_combinators.php">Combinators</a></h1>
+<ul>
+<li>Child combinator</li>
+<li>Descendant combinator</li>
+<li>Next-sibling combinator</li>
+<li>Subsequent-sibling combinator</li>
+</ul>
+<h3 id="子元素"><a href="https://www.w3schools.com/cssref/sel_element_gt.php">子元素</a></h3>
+<blockquote>
+<p>当前元素的下一级元素。</p>
+</blockquote>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#E1E4E8">element1 </span><span style="color:#F97583">></span><span style="color:#E1E4E8"> element2 {</span></span>
+<span class="line"><span style="color:#79B8FF">  css</span><span style="color:#79B8FF"> declarations</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">} </span></span></code></pre>
+<h3 id="后代元素"><a href="https://www.w3school.com.cn/css/css_selector_descendant.asp">后代元素</a></h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="xml"><code><span class="line"><span style="color:#E1E4E8">ol li</span></span></code></pre>
+<p>就表示当前元素（ol）下的所有li元素。</p>
+<h3 id="接续兄弟元素"><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Next-sibling_combinator">接续兄弟元素</a></h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>element1 + element2 {</span></span>
+<span class="line"><span>  css declarations;</span></span>
+<span class="line"><span>} </span></span></code></pre>
+<h3 id="后续兄弟元素"><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator">后续兄弟元素</a></h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>element1 ~ element2 {</span></span>
+<span class="line"><span>  css declarations;</span></span>
+<span class="line"><span>} </span></span></code></pre>
+<h1 id="selectors"><a href="https://www.w3schools.com/cssref/css_selectors.php">Selectors</a></h1>
+
 
 
 
@@ -24,27 +50,7 @@
 
 
 <table><thead><tr><th>Selector type</th><th>CSS</th><th>说明</th></tr></thead><tbody><tr><td>Tag name</td><td>p {}</td><td>对整个网页中标签有效</td></tr><tr><td>ID</td><td>#some-id {}</td><td>对网页中指定id有效</td></tr><tr><td>Class</td><td>.some-class {}</td><td>对网页中相同类名有效</td></tr></tbody></table>
-<h1 id="元素">元素</h1>
-<p>document的<a href="https://www.w3school.com.cn/css/css_selector_type.asp">元素</a>就是最基本的选择器。</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="xml"><code><span class="line"><span style="color:#E1E4E8">html {color:black;}</span></span>
-<span class="line"><span style="color:#E1E4E8">h1 {color:blue;}</span></span>
-<span class="line"><span style="color:#E1E4E8">h2 {color:silver;}</span></span></code></pre>
-<h2 id="下级元素">下级元素</h2>
-<h3 id="子元素"><a href="https://www.w3school.com.cn/css/css_selector_child.asp">子元素</a></h3>
-<blockquote>
-<p>当前元素的下一级元素。</p>
-</blockquote>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#F97583">></span></span></code></pre>
-<h3 id="后代元素"><a href="https://www.w3school.com.cn/css/css_selector_descendant.asp">后代元素</a></h3>
-<blockquote>
-<p>空格替代 “>”
-例如:</p>
-</blockquote>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="xml"><code><span class="line"><span style="color:#E1E4E8">ol li</span></span></code></pre>
-<p>就表示当前元素（ol）下的所有li元素。</p>
-<h1 id="属性选择器">属性选择器</h1>
-<p><a href="https://www.w3school.com.cn/cssref/selector_attribute.asp">属性</a></p>
-<h2 id="1设置多个属性">1）设置多个属性</h2>
+<h2 id="css-attribute-selectors"><a href="https://www.w3schools.com/cssref/sel_attribute.php">CSS Attribute Selectors</a></h2>
 <ul>
 <li>
 <p><a href="https://www.w3school.com.cn/cssref/selector_attr_begin.asp">“^” 开头匹配</a></p>
@@ -55,6 +61,11 @@
 <li>
 <p><a href="https://www.w3school.com.cn/cssref/selector_attr_contain.asp">”*” 包含匹配</a></p>
 </li>
+<li>
+<p><a href="https://www.w3schools.com/cssref/sel_attribute_value.php">value 匹配</a></p>
+</li>
 </ul>
-<h1 id="3-奇偶选择器">3. 奇偶选择器</h1>
-<p><a href="https://www.w3school.com.cn/cssref/selector_nth-child.asp">:nth-child</a> 其常用值有：odd和even</p>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
+<h3 id="value-匹配">value 匹配</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>[attribute = value] {</span></span>
+<span class="line"><span>  css declarations;</span></span>
+<span class="line"><span>} </span></span></code></pre>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
