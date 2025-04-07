@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>tab - tailwindcss</title></head> <body> <h1>tab - tailwindcss</h1>  <p><em>tab</em></p> <p>2025-04-06</p> <p>Written by: tdtc</p> <h3 id="pure-css">pure css</h3>
+<ul>
+<li>css</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>input[type="radio"] {</span></span>
+<span class="line"><span>  display: none;</span></span>
+<span class="line"><span>  position: absolute;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>input[type="radio"] + .mytabs > label {</span></span>
+<span class="line"><span>  display: inline-block;</span></span>
+<span class="line"><span>  float: left;</span></span>
+<span class="line"><span>  width: 33%;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>input[type="radio"] + .mytabs > div {</span></span>
+<span class="line"><span>  display: none;</span></span>
+<span class="line"><span>  position: absolute;</span></span>
+<span class="line"><span>  top: 65px;</span></span>
+<span class="line"><span>  width: 100%;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>input[type="radio"]:checked + .mytabs > .tab-pane {</span></span>
+<span class="line"><span>  display: block;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>input[type="radio"]:checked + .mytabs > label {</span></span>
+<span class="line"><span>  background-color: #B1CF6F;</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<ul>
+<li>html</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="tab-content"></span></span>
+<span class="line"><span>  &#x3C;input type="radio" name="tabs" id="tab1" checked></span></span>
+<span class="line"><span>  &#x3C;div class="mytabs"></span></span>
+<span class="line"><span>    &#x3C;label for="tab1">one&#x3C;/label></span></span>
+<span class="line"><span>    &#x3C;div class="tab-pane"></span></span>
+<span class="line"><span>      &#x3C;p>All my content for the first tab goes here.&#x3C;/p></span></span>
+<span class="line"><span>    &#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;input type="radio" name="tabs" id="tab2"></span></span>
+<span class="line"><span>  &#x3C;div class="mytabs"></span></span>
+<span class="line"><span>    &#x3C;label for="tab2">two&#x3C;/label></span></span>
+<span class="line"><span>    &#x3C;div class="tab-pane"></span></span>
+<span class="line"><span>      &#x3C;p>this is two&#x3C;/p></span></span>
+<span class="line"><span>    &#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h2 id="hybrid-css">Hybrid css</h2>
+<ul>
+<li>js</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>    function toggleTabs(id1, id2) {</span></span>
+<span class="line"><span>        const elementCurrent = document.getElementById(id1);</span></span>
+<span class="line"><span>        const element2 = document.getElementById(id2)</span></span>
+<span class="line"><span>        console.log(elementCurrent);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        if (elementCurrent.classList != "block")</span></span>
+<span class="line"><span>        {</span></span>
+<span class="line"><span>            elementCurrent.classList.remove('tw:hidden');</span></span>
+<span class="line"><span>            element2.classList.add("tw:hidden");</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    }</span></span></code></pre>
+<ul>
+<li>html</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;nav class="tw:tabs tw:tabs-bordered" role="tablist"></span></span>
+<span class="line"><span>  &#x3C;button class="tw:tab tw:active-tab:tab-active tw:active" onclick="toggleTabs('tabs1', 'tabs2')" data-tab="tabs1"></span></span>
+<span class="line"><span>    Home</span></span>
+<span class="line"><span>  &#x3C;/button></span></span>
+<span class="line"><span>  &#x3C;button class="tw:tab tw:active-tab:tab-active" onclick="toggleTabs('tabs2', 'tabs1')" data-tab="tabs2"></span></span>
+<span class="line"><span>    Profile</span></span>
+<span class="line"><span>  &#x3C;/button></span></span>
+<span class="line"><span>&#x3C;/nav></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#x3C;div class="tw:mt-3"></span></span>
+<span class="line"><span>  &#x3C;div id="tabs1" class="tw:block"></span></span>
+<span class="line"><span>    &#x3C;p>Welcome to the Home tab!&#x3C;/p></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div id="tabs2" class="tw:hidden"></span></span>
+<span class="line"><span>    &#x3C;p>This is your Profile tab.&#x3C;/p></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="flyonui"><a href="https://flyonui.com/docs/getting-started/quick-start/">flyonui</a></h3>
+<ul>
+<li>install</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>npm i -D flyonui@latest</span></span></code></pre>
+<ul>
+<li>config</li>
+</ul>
+<blockquote>
+<p>site2.css</p>
+</blockquote>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>@plugin "flyonui";</span></span>
+<span class="line"><span>@import "../../node_modules/flyonui/variants.css" prefix(tw);</span></span></code></pre>
+<ul>
+<li>Include FlyonUI JavaScript in HTML for JS components</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;script src="path/to/flyonui/dist/tabs.js">&#x3C;/script></span></span></code></pre>
+<h4 id="deploy">deploy</h4>
+<p>copy “flyonui” to “wwwroot”</p>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/styling-with-utility-classes#when-to-use-inline-styles">inline styles</a></li>
+<li><a href="https://stackoverflow.com/questions/25943488/how-can-i-make-tabs-with-only-css">How can I make tabs with only CSS?</a></li>
+<li><a href="https://flyonui.com/docs/navigations/tabs-pills/">tabs - fly</a></li>
+<li><a href="https://jqueryui.com/tabs/">jq</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
