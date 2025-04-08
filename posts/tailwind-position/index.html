@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>position</title></head> <body> <h1>position</h1>  <p><em>Utilities for controlling how an element is positioned in the document.</em></p> <p>2025-04-08</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>static</td><td>position: static;</td></tr><tr><td>fixed</td><td>position: fixed;</td></tr><tr><td>absolute</td><td>position: absolute;</td></tr><tr><td>relative</td><td>position: relative;</td></tr><tr><td>sticky</td><td>position: sticky;</td></tr></tbody></table>
+<h3 id="statically-positioning-elements">Statically positioning elements</h3>
+<p>Use the <code>static</code> utility to position an element according to the normal flow of the document:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="static ..."></span></span>
+<span class="line"><span>  &#x3C;p>Static parent&#x3C;/p></span></span>
+<span class="line"><span>  &#x3C;div class="absolute bottom-0 left-0 ..."></span></span>
+<span class="line"><span>    &#x3C;p>Absolute child&#x3C;/p></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<p>With statically positioned elements, any <a href="https://tailwindcss.com/docs/top-right-bottom-left">offsets</a>
+will be ignored and the element will not act as a position reference for absolutely positioned children.</p>
+<h3 id="relatively-positioning-elements">Relatively positioning elements</h3>
+<p>Use the <code>relative</code> utility to position an element according to the normal flow of the document:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="relative ..."></span></span>
+<span class="line"><span>  &#x3C;p>Relative parent&#x3C;/p></span></span>
+<span class="line"><span>  &#x3C;div class="absolute bottom-0 left-0 ..."></span></span>
+<span class="line"><span>    &#x3C;p>Absolute child&#x3C;/p></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<p>With relatively position elements, any <a href="https://tailwindcss.com/docs/top-right-bottom-left">offsets</a>
+are calculated relative to the element’s normal position and the element
+will act as a position reference for absolutely positioned children.</p>
+<h3 id="absolutely-positioning-elements">Absolutely positioning elements</h3>
+<p>Use the <code>absolute</code> utility to position an element outside of the normal flow of the document,
+causing neighboring elements to act as if the element doesn’t exist:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="static ..."></span></span>
+<span class="line"><span>  &#x3C;!-- Static parent --></span></span>
+<span class="line"><span>  &#x3C;div class="static ...">&#x3C;p>Static child&#x3C;/p>&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div class="inline-block ...">&#x3C;p>Static sibling&#x3C;/p>&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;!-- Static parent --></span></span>
+<span class="line"><span>  &#x3C;div class="absolute ...">&#x3C;p>Absolute child&#x3C;/p>&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div class="inline-block ...">&#x3C;p>Static sibling&#x3C;/p>&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<p>With absolutely positioned elements, any <a href="https://tailwindcss.com/docs/top-right-bottom-left">offsets</a>
+are calculated relative to the nearest parent that has a position other than <code>static</code>,
+and the element will act as a position reference for other absolutely positioned children.</p>
+<h3 id="fixed-positioning-elements">Fixed positioning elements</h3>
+<p>Use the <code>fixed</code> utility to position an element relative to the browser window:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="relative"></span></span>
+<span class="line"><span>  &#x3C;div class="fixed top-0 right-0 left-0">Contacts&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div></span></span>
+<span class="line"><span>    &#x3C;div></span></span>
+<span class="line"><span>      &#x3C;img src="/img/andrew.jpg" /></span></span>
+<span class="line"><span>      &#x3C;strong>Andrew Alfred&#x3C;/strong></span></span>
+<span class="line"><span>    &#x3C;/div></span></span>
+<span class="line"><span>    &#x3C;div></span></span>
+<span class="line"><span>      &#x3C;img src="/img/debra.jpg" /></span></span>
+<span class="line"><span>      &#x3C;strong>Debra Houston&#x3C;/strong></span></span>
+<span class="line"><span>    &#x3C;/div></span></span>
+<span class="line"><span>    &#x3C;!-- ... --></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<p>With fixed positioned elements, any <a href="https://tailwindcss.com/docs/top-right-bottom-left">offsets</a>
+are calculated relative to the viewport and the element will act as a position reference for absolutely positioned children.</p>
+<h3 id="sticky-positioning-elements">Sticky positioning elements</h3>
+<p>Use the <code>sticky</code> utility to position an element as <code>relative</code> until it
+crosses a specified threshold, then treat it as <code>fixed</code> until its parent is off screen:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div></span></span>
+<span class="line"><span>  &#x3C;div></span></span>
+<span class="line"><span>    &#x3C;div class="sticky top-0 ...">A&#x3C;/div></span></span>
+<span class="line"><span>    &#x3C;div></span></span>
+<span class="line"><span>      &#x3C;div></span></span>
+<span class="line"><span>        &#x3C;img src="/img/andrew.jpg" /></span></span>
+<span class="line"><span>        &#x3C;strong>Andrew Alfred&#x3C;/strong></span></span>
+<span class="line"><span>      &#x3C;/div></span></span>
+<span class="line"><span>      &#x3C;div></span></span>
+<span class="line"><span>        &#x3C;img src="/img/aisha.jpg" /></span></span>
+<span class="line"><span>        &#x3C;strong>Aisha Houston&#x3C;/strong></span></span>
+<span class="line"><span>      &#x3C;/div></span></span>
+<span class="line"><span>      &#x3C;!-- ... --></span></span>
+<span class="line"><span>    &#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div></span></span>
+<span class="line"><span>    &#x3C;div class="sticky top-0">B&#x3C;/div></span></span>
+<span class="line"><span>    &#x3C;div></span></span>
+<span class="line"><span>      &#x3C;div></span></span>
+<span class="line"><span>        &#x3C;img src="/img/bob.jpg" /></span></span>
+<span class="line"><span>        &#x3C;strong>Bob Alfred&#x3C;/strong></span></span>
+<span class="line"><span>      &#x3C;/div></span></span>
+<span class="line"><span>      &#x3C;!-- ... --></span></span>
+<span class="line"><span>    &#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<p>With sticky positioned elements, any <a href="https://tailwindcss.com/docs/top-right-bottom-left">offsets</a>
+are calculated relative to the element’s normal position and the element
+will act as a position reference for absolutely positioned children.</p>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/position">position</a></li>
+<li><a href="https://tailwindcss.com/docs/position#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
