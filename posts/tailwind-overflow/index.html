@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>overflow</title></head> <body> <h1>overflow</h1>  <p><em>Utilities for controlling how an element handles content that is too large for the container.</em></p> <p>2025-04-09</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>overflow-auto</td><td>overflow: auto;</td></tr><tr><td>overflow-hidden</td><td>overflow: hidden;</td></tr><tr><td>overflow-clip</td><td>overflow: clip;</td></tr><tr><td>overflow-visible</td><td>overflow: visible;</td></tr><tr><td>overflow-scroll</td><td>overflow: scroll;</td></tr></tbody></table>
+<h4 id="overflow-x-and-overflow-y">overflow-x and overflow-y</h4>
+<ul>
+<li>auto</li>
+<li>hidden</li>
+<li>clip</li>
+<li>visible</li>
+<li>scroll</li>
+</ul>
+<p>for example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>overflow-x-auto</span></span></code></pre>
+<h3 id="showing-content-that-overflows">Showing content that overflows</h3>
+<p>Use the <code>overflow-visible</code> utility to prevent content within an element from being clipped:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="overflow-visible ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<p>Note that any content that overflows the bounds of the element will then be visible.</p>
+<h3 id="hiding-content-that-overflows">Hiding content that overflows</h3>
+<p>Use the <code>overflow-hidden</code> utility to clip any content within an element that overflows the bounds of that element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="overflow-hidden ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="scrolling-if-needed">Scrolling if needed</h3>
+<p>Use the <code>overflow-auto</code> utility to add scrollbars to
+an element in the event that its content overflows the bounds of that element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="overflow-auto ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<p>Unlike <code>overflow-scroll</code>, which always shows scrollbars,
+this utility will only show them if scrolling is necessary.</p>
+<h3 id="scrolling-horizontally-if-needed">Scrolling horizontally if needed</h3>
+<p>Use the <code>overflow-x-auto</code> utility to allow horizontal scrolling if needed:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="overflow-x-auto ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="scrolling-vertically-if-needed">Scrolling vertically if needed</h3>
+<p>Use the <code>overflow-y-auto</code> utility to allow vertical scrolling if needed:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="h-32 overflow-y-auto ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="scrolling-horizontally-always">Scrolling horizontally always</h3>
+<p>Use the <code>overflow-x-scroll</code> utility to allow
+horizontal scrolling and always show scrollbars unless always-visible
+scrollbars are disabled by the operating system:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="overflow-x-scroll ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="scrolling-vertically-always">Scrolling vertically always</h3>
+<p>Use the <code>overflow-y-scroll</code> utility to allow
+vertical scrolling and always show scrollbars unless always-visible
+scrollbars are disabled by the operating system:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="overflow-y-scroll ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="scrolling-in-all-directions">Scrolling in all directions</h3>
+<p>Use the <code>overflow-scroll</code> utility to add scrollbars to an element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="overflow-scroll ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<p>Unlike <code>overflow-auto</code>, which only shows scrollbars if they are necessary,
+this utility always shows them. Note that some operating systems (like macOS)
+hide unnecessary scrollbars regardless of this setting.</p>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/overflow">overflow</a></li>
+<li><a href="https://tailwindcss.com/docs/overflow#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
