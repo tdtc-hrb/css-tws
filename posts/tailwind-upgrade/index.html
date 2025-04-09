@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>tailwindcss upgrade</title></head> <body> <h1>tailwindcss upgrade</h1>  <p><em>v0.1, v1, v2, v3 to v4</em></p> <p>2025-04-08</p> <p>Written by: tdtc</p> <h3 id="prefix"><a href="https://stackoverflow.com/a/79411170">prefix</a></h3>
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>tailwindcss upgrade</title></head> <body> <h1>tailwindcss upgrade</h1>  <p><em>v0.1, v1, v2, v3 to v4</em></p> <p>2025-04-09</p> <p>Written by: tdtc</p> <h3 id="prefix"><a href="https://stackoverflow.com/a/79411170">prefix</a></h3>
 <ul>
 <li>v4</li>
 </ul>
@@ -9,6 +9,35 @@
 </ul>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>myprefix-text-red-500</span></span>
 <span class="line"><span>hover:myprefix-text-red-500</span></span></code></pre>
+<h2 id="utilities">utilities</h2>
+<ul>
+<li>
+<p><a href="https://tailwindcss.com/docs/upgrade-guide#renamed-utilities">Renamed utilities - v4</a><br>
+|v3|v4|
+|-|-|
+|shadow-sm|shadow-xs|
+|shadow|shadow-sm|
+|drop-shadow-sm|drop-shadow-xs|
+|drop-shadow|drop-shadow-sm|
+|blur-sm|blur-xs|
+|blur|blur-sm|
+|backdrop-blur-sm|backdrop-blur-xs|
+|backdrop-blur|backdrop-blur-sm|
+|rounded-sm|rounded-xs|
+|rounded|rounded-sm|
+|outline-none|outline-hidden|
+|ring|ring-3|</p>
+</li>
+<li>
+<p><a href="https://v3.tailwindcss.com/docs/upgrade-guide#class-name-changes">class-name-changes - v3</a>:<br>
+|old|new|
+|-|-|
+|overflow-clip|text-clip|
+|overflow-ellipsis|text-ellipsis|
+|flex-grow-0|grow-0|
+|flex-shrink|shrink|</p>
+</li>
+</ul>
 <h3 id="flex-grow"><a href="https://tailwindcss.com/docs/upgrade-guide#removed-deprecated-utilities">flex-grow</a></h3>
 <ul>
 <li>v4</li>
@@ -27,6 +56,19 @@
 <li>v1</li>
 </ul>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>flex-no-wrap</span></span></code></pre>
+<h3 id="flex-no-shrink"><a href="https://v1.tailwindcss.com/docs/upgrading-to-v1#11-replace-flex-no-grow-shrink-with-flex-grow-shrink-0">flex no shrink</a></h3>
+<ul>
+<li>v4</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>shrink-0</span></span></code></pre>
+<ul>
+<li>v1</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>flex-shrink-0</span></span></code></pre>
+<ul>
+<li>v0.1</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>flex-no-shrink</span></span></code></pre>
 <h3 id="whitespace">whitespace</h3>
 <ul>
 <li>v2+</li>
@@ -63,6 +105,15 @@
 <li>v3</li>
 </ul>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>leading-normal line-height: 1.5;</span></span></code></pre>
+<h4 id="leading-tight">leading tight</h4>
+<ul>
+<li>v4</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>leading-[1.25]</span></span></code></pre>
+<ul>
+<li>v3</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>leading-tight</span></span></code></pre>
 <h3 id="position">position</h3>
 <h4 id="sticky">sticky</h4>
 <ul>
@@ -73,11 +124,114 @@
 <li>v0.1</li>
 </ul>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>none</span></span></code></pre>
+<h3 id="scrolling-touch"><a href="https://v2.tailwindcss.com/docs/upgrading-to-v2#the-scrolling-touch-and-scrolling-auto-utilities-have-been-removed">scrolling touch</a></h3>
+<p>we’ve removed these two utilities from v2.0.</p>
+<ul>
+<li>scrolling-touch</li>
+<li>scrolling-auto</li>
+</ul>
+<h3 id="class-name-changes---v2">Class name changes - v2</h3>
+<p><a href="https://v2.tailwindcss.com/docs/upgrading-to-v2#update-renamed-utility-classes">Update renamed utility classes</a> :</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>old</th><th>new</th></tr></thead><tbody><tr><td>whitespace-no-wrap</td><td>whitespace-nowrap</td></tr><tr><td>flex-no-wrap</td><td>flex-nowrap</td></tr><tr><td>col-gap-{n}</td><td>gap-x-{n}</td></tr><tr><td>row-gap-{n}</td><td>gap-y-{n}</td></tr></tbody></table>
+<ul>
+<li><a href="https://v2.tailwindcss.com/docs/upgrading-to-v2#support-for-ie-11-has-been-dropped">Support for IE 11 has been dropped - v2</a></li>
+</ul>
+<h4 id="replace-shadow-outline-and-shadow-xs-with-ring-utilities"><a href="https://v2.tailwindcss.com/docs/upgrading-to-v2#replace-shadow-outline-and-shadow-xs-with-ring-utilities">Replace shadow-outline and shadow-xs with ring utilities</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>old</th><th>new</th></tr></thead><tbody><tr><td>focus:shadow-outline</td><td>focus:ring</td></tr><tr><td>shadow-xs</td><td>ring-1 ring-black ring-opacity-5</td></tr></tbody></table>
+<h4 id="replace-clearfix-with-flow-root"><a href="https://v2.tailwindcss.com/docs/upgrading-to-v2#replace-clearfix-with-flow-root">Replace clearfix with flow-root</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>old</th><th>new</th></tr></thead><tbody><tr><td>clearfix</td><td>flow-root</td></tr></tbody></table>
+<h4 id="update-font-weight-class-names-for-100-and-200-weights"><a href="https://v2.tailwindcss.com/docs/upgrading-to-v2#update-font-weight-class-names-for-100-and-200-weights">Update font-weight class names for 100 and 200 weights</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Font weight</th><th>old</th><th>new</th></tr></thead><tbody><tr><td>100</td><td>font-hairline</td><td>font-thin</td></tr><tr><td>200</td><td>font-thin</td><td>font-extralight</td></tr></tbody></table>
+<h2 id="bs2tw"><a href="https://github.com/awssat/tailwindo/blob/master/src/Framework/BootstrapFramework.php">bs2tw</a></h2>
+<h3 id="text">text</h3>
+<h4 id="initialism">initialism</h4>
+<ul>
+<li>bs</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>  font-size: 90%;</span></span>
+<span class="line"><span>  text-transform: uppercase;</span></span></code></pre>
+<ul>
+<li>tw</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>text-xs</span></span>
+<span class="line"><span>uppercase</span></span></code></pre>
 <h2 id="ref">Ref</h2>
 <ul>
-<li><a href="https://tailwindcss.com/docs/upgrade-guide">to v4</a></li>
-<li><a href="https://v3.tailwindcss.com/docs/upgrade-guide">to v3</a></li>
-<li><a href="https://v2.tailwindcss.com/docs/upgrading-to-v2">to v2</a></li>
-<li><a href="https://v1.tailwindcss.com/docs/upgrading-to-v1">to v1</a></li>
+<li><a href="https://v1.tailwindcss.com/docs/upgrading-to-v1">Upgrading from v0.x to v1.0</a></li>
 <li><a href="https://johnzanussi.com/posts/bootstrap-to-tailwind-migration">Migrating from Bootstrap to Tailwind</a></li>
 </ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
