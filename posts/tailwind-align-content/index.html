@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>align content(flex and grid)</title></head> <body> <h1>align content(flex and grid)</h1>  <p><em>Utilities for controlling how rows are positioned in multi-row flex and grid containers.</em></p> <p>2025-04-09</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>content-normal</td><td>align-content: normal;</td></tr><tr><td>content-center</td><td>align-content: center;</td></tr><tr><td>content-start</td><td>align-content: flex-start;</td></tr><tr><td>content-end</td><td>align-content: flex-end;</td></tr><tr><td>content-between</td><td>align-content: space-between;</td></tr><tr><td>content-around</td><td>align-content: space-around;</td></tr><tr><td>content-evenly</td><td>align-content: space-evenly;</td></tr><tr><td>content-baseline</td><td>align-content: baseline;</td></tr><tr><td>content-stretch</td><td>align-content: stretch;</td></tr></tbody></table>
+<h3 id="start">Start</h3>
+<p>Use <code>content-start</code> to pack rows in a container against the start of the cross axis:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="grid h-56 grid-cols-3 content-start gap-4 ..."></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>04&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>05&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="center">Center</h3>
+<p>Use <code>content-center</code> to pack rows in a container in the center of the cross axis:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="grid h-56 grid-cols-3 content-center gap-4 ..."></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>04&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>05&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="end">End</h3>
+<p>Use <code>content-end</code> to pack rows in a container against the end of the cross axis:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="grid h-56 grid-cols-3 content-end gap-4 ..."></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>04&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>05&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="space-between">Space between</h3>
+<p>Use <code>content-between</code> to distribute rows in a container such that there is an equal amount of space between each line:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="grid h-56 grid-cols-3 content-between gap-4 ..."></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>04&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>05&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="space-around">Space around</h3>
+<p>Use <code>content-around</code> to distribute rows in a container such that there is an equal amount of space around each line:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="grid h-56 grid-cols-3 content-around gap-4 ..."></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>04&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>05&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="space-evenly">Space evenly</h3>
+<p>Use <code>content-evenly</code> to distribute rows in a container such
+that there is an equal amount of space around each item, but also accounting for
+the doubling of space you would normally see between each item when using <code>content-around</code>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="grid h-56 grid-cols-3 content-evenly gap-4 ..."></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>04&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>05&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="stretch">Stretch</h3>
+<p>Use <code>content-stretch</code> to allow content items to fill the available space along the container’s cross axis:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="grid h-56 grid-cols-3 content-stretch gap-4 ..."></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>04&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>05&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="normal">Normal</h3>
+<p>Use <code>content-normal</code> to pack content items in their
+default position as if no <code>align-content</code> value was set:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="grid h-56 grid-cols-3 content-normal gap-4 ..."></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>04&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>05&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/align-content">align content</a></li>
+<li><a href="https://tailwindcss.com/docs/align-content#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
