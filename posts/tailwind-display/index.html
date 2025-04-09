@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>display</title></head> <body> <h1>display</h1>  <p><em>Utilities for controlling the display box type of an element.</em></p> <p>2025-03-11</p> <p>Written by: tdtc</p> 
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>display</title></head> <body> <h1>display</h1>  <p><em>Utilities for controlling the display box type of an element.</em></p> <p>2025-04-09</p> <p>Written by: tdtc</p> 
 
 
 
@@ -24,11 +24,35 @@
 
 
 <table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>inline</td><td>display: inline;</td></tr><tr><td>block</td><td>display: block;</td></tr><tr><td>inline-block</td><td>display: inline-block;</td></tr><tr><td>hidden</td><td>display: none;</td></tr></tbody></table>
-<p>常用值</p>
+<p>常用值:</p>
 <ul>
 <li>Block and Inline</li>
 <li>Hidden</li>
 </ul>
+<p>特殊值:</p>
+<ul>
+<li>Screen-reader only</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>position: absolute;</span></span>
+<span class="line"><span>width: 1px;</span></span>
+<span class="line"><span>height: 1px;</span></span>
+<span class="line"><span>padding: 0;</span></span>
+<span class="line"><span>margin: -1px;</span></span>
+<span class="line"><span>overflow: hidden;</span></span>
+<span class="line"><span>clip: rect(0, 0, 0, 0);</span></span>
+<span class="line"><span>white-space: nowrap;</span></span>
+<span class="line"><span>border-width: 0;</span></span></code></pre>
+<ul>
+<li>not-sr-only</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>position: static;</span></span>
+<span class="line"><span>width: auto;</span></span>
+<span class="line"><span>height: auto;</span></span>
+<span class="line"><span>padding: 0;</span></span>
+<span class="line"><span>margin: 0;</span></span>
+<span class="line"><span>overflow: visible;</span></span>
+<span class="line"><span>clip: auto;</span></span>
+<span class="line"><span>white-space: normal;</span></span></code></pre>
 <h3 id="block-and-inline">Block and Inline</h3>
 <p>Use the <code>inline</code>, <code>inline-block</code>, and <code>block</code>
 utilities to control the flow of text and elements:</p>
@@ -51,6 +75,17 @@ utilities to control the flow of text and elements:</p>
 <span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
 <span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
 <span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="screen-reader-only">Screen-reader only</h3>
+<p>Use <code>sr-only</code> to hide an element visually without hiding it from screen readers:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;a href="#"></span></span>
+<span class="line"><span>  &#x3C;svg>&#x3C;!-- ... -->&#x3C;/svg></span></span>
+<span class="line"><span>  &#x3C;span class="sr-only">Settings&#x3C;/span></span></span>
+<span class="line"><span>&#x3C;/a></span></span></code></pre>
+<p>Use <code>not-sr-only</code> to undo <code>sr-only</code>, making an element visible to sighted users as well as screen readers:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;a href="#"></span></span>
+<span class="line"><span>  &#x3C;svg>&#x3C;!-- ... -->&#x3C;/svg></span></span>
+<span class="line"><span>  &#x3C;span class="sr-only sm:not-sr-only">Settings&#x3C;/span></span></span>
+<span class="line"><span>&#x3C;/a></span></span></code></pre>
 <h2 id="ref">Ref</h2>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display - mdn</a></li>

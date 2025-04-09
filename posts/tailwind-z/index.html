@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>z-index</title></head> <body> <h1>z-index</h1>  <p><em>Utilities for controlling the stack order of an element.</em></p> <p>2025-04-09</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>z-<number></number></td><td>z-index: <number>;</number></td></tr><tr><td>z-auto</td><td>z-index: auto;</td></tr><tr><td>z-[<value>]</value></td><td>z-index: <value>;</value></td></tr><tr><td>z-(<custom-property>)</custom-property></td><td>z-index: var(<custom-property>);</custom-property></td></tr></tbody></table>
+<h3 id="basic-example">Basic example</h3>
+<p>Use the <code>z-<number></number></code> utilities like <code>z-10</code>
+and <code>z-50</code> to control the stack order (or three-dimensional positioning)
+of an element, regardless of the order it has been displayed:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="z-40 ...">05&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="z-30 ...">04&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="z-20 ...">03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="z-10 ...">02&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="z-0 ...">01&#x3C;/div></span></span></code></pre>
+<h3 id="using-negative-values">Using negative values</h3>
+<p>To use a negative z-index value, prefix the class name with a dash to convert it to a negative value:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="...">05&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="...">04&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="-z-10 ...">03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="...">02&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="...">01&#x3C;/div></span></span></code></pre>
+<h3 id="using-a-custom-value">Using a custom value</h3>
+<p>Use the <code>z-[<value>]</value></code> syntax to set the stack order based on a completely custom value:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="z-[calc(var(--index)+1)] ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index">z-index - mdn</a></li>
+<li><a href="https://tailwindcss.com/docs/z-index">z-index - tw</a></li>
+<li><a href="https://tailwindcss.com/docs/z-index#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
