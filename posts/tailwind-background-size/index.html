@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>background size</title></head> <body> <h1>background size</h1>  <p><em>Utilities for controlling the background size of an element&#39;s background image.</em></p> <p>2025-04-10</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>bg-auto</td><td>background-size: auto;</td></tr><tr><td>bg-cover</td><td>background-size: cover;</td></tr><tr><td>bg-contain</td><td>background-size: contain;</td></tr><tr><td>bg-size-(<custom-property>)</custom-property></td><td>background-size: var(<custom-property>);</custom-property></td></tr><tr><td>bg-size-[<value>]</value></td><td>background-size: <value>;</value></td></tr></tbody></table>
+<h3 id="filling-the-container">Filling the container</h3>
+<p>Use the <code>bg-cover</code> utility to scale the background image until it fills the background layer, cropping the image if needed:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="bg-[url(/img/mountains.jpg)] bg-cover bg-center">&#x3C;/div></span></span></code></pre>
+<h3 id="filling-without-cropping">Filling without cropping</h3>
+<p>Use the <code>bg-contain</code> utility to scale the background image to the outer edges without cropping or stretching:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="bg-[url(/img/mountains.jpg)] bg-contain bg-center">&#x3C;/div></span></span></code></pre>
+<h3 id="using-the-default-size">Using the default size</h3>
+<p>Use the <code>bg-auto</code> utility to display the background image at its default size:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="bg-[url(/img/mountains.jpg)] bg-auto bg-center bg-no-repeat">&#x3C;/div></span></span></code></pre>
+<h3 id="using-a-custom-value">Using a custom value</h3>
+<p>Use the <code>bg-size-[<value>]</value></code> syntax to set the background size based on a completely custom value:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="bg-size-[auto_100px] ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/background-size">background-size</a></li>
+<li><a href="https://tailwindcss.com/docs/background-size#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>

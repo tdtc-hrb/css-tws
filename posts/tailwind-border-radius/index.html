@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>border radius</title></head> <body> <h1>border radius</h1>  <p><em>Utilities for controlling the border radius of an element.</em></p> <p>2025-04-10</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>rounded-xs</td><td>border-radius: var(—radius-xs); /* 0.125rem (2px) */</td></tr><tr><td>rounded-sm</td><td>border-radius: var(—radius-sm); /* 0.25rem (4px) */</td></tr><tr><td>rounded-md</td><td>border-radius: var(—radius-md); /* 0.375rem (6px) */</td></tr><tr><td>rounded-lg</td><td>border-radius: var(—radius-lg); /* 0.5rem (8px) */</td></tr><tr><td>rounded-xl</td><td>border-radius: var(—radius-xl); /* 0.75rem (12px) */</td></tr><tr><td>rounded-2xl</td><td>border-radius: var(—radius-2xl); /* 1rem (16px) */</td></tr><tr><td>rounded-3xl</td><td>border-radius: var(—radius-3xl); /* 1.5rem (24px) */</td></tr><tr><td>rounded-4xl</td><td>border-radius: var(—radius-4xl); /* 2rem (32px) */</td></tr><tr><td>rounded-none</td><td>border-radius: 0;</td></tr><tr><td>rounded-full</td><td>border-radius: calc(infinity * 1px);</td></tr><tr><td>rounded-(<custom-property>)</custom-property></td><td>border-radius: var(<custom-property>);</custom-property></td></tr><tr><td>rounded-[<value>]</value></td><td>border-radius: <value>;</value></td></tr></tbody></table>
+<h4 id="direction">direction</h4>
+<ul>
+<li>t, r, b, l,</li>
+</ul>
+<blockquote>
+<p>top, right, bottom, left</p>
+</blockquote>
+<p>for example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>rounded-b-xs</span></span></code></pre>
+<ul>
+<li>tl, tr, br, bl</li>
+</ul>
+<blockquote>
+<p>top-left, top-right, bottom-right, bottom-left</p>
+</blockquote>
+<p>for example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>rounded-tl-sm</span></span></code></pre>
+<h4 id="dimension-point">Dimension Point</h4>
+<ul>
+<li>s</li>
+</ul>
+<blockquote>
+<p>start-start and end-start</p>
+</blockquote>
+<p>for example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>rounded-s-md</span></span></code></pre>
+<ul>
+<li>e</li>
+</ul>
+<blockquote>
+<p>start-end and end-end</p>
+</blockquote>
+<p>for example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>rounded-e-lg</span></span></code></pre>
+<ul>
+<li>ss</li>
+</ul>
+<blockquote>
+<p>start-start</p>
+</blockquote>
+<p>for example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>rounded-ss-xl</span></span></code></pre>
+<ul>
+<li>se</li>
+</ul>
+<blockquote>
+<p>start-end</p>
+</blockquote>
+<p>for example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>rounded-se-2xl</span></span></code></pre>
+<ul>
+<li>ee</li>
+</ul>
+<blockquote>
+<p>end-end</p>
+</blockquote>
+<p>for example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>rounded-ee-3xl</span></span></code></pre>
+<ul>
+<li>es</li>
+</ul>
+<blockquote>
+<p>end-start</p>
+</blockquote>
+<p>for example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>rounded-es-4xl</span></span></code></pre>
+<h3 id="basic-example">Basic example</h3>
+<p>Use utilities like <code>rounded-sm</code> and <code>rounded-md</code> to apply different border radius sizes to an element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="rounded-sm ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="rounded-md ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="rounded-lg ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="rounded-xl ...">&#x3C;/div></span></span></code></pre>
+<h3 id="rounding-sides-separately">Rounding sides separately</h3>
+<p>Use utilities like <code>rounded-t-md</code> and <code>rounded-r-lg</code> to only round one side of an element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="rounded-t-lg ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="rounded-r-lg ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="rounded-b-lg ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="rounded-l-lg ...">&#x3C;/div></span></span></code></pre>
+<h3 id="rounding-corners-separately">Rounding corners separately</h3>
+<p>Use utilities like <code>rounded-tr-md</code> and <code>rounded-tl-lg</code> utilities to only round one corner of an element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="rounded-tl-lg ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="rounded-tr-lg ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="rounded-br-lg ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div class="rounded-bl-lg ...">&#x3C;/div></span></span></code></pre>
+<h3 id="using-logical-properties">Using logical properties</h3>
+<p>Use utilities like <code>rounded-s-md</code> and <code>rounded-se-xl</code> to set
+the border radius using logical properties, which map to the appropriate corners based on the text direction:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div dir="ltr"></span></span>
+<span class="line"><span>  &#x3C;div class="rounded-s-lg ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div dir="rtl"></span></span>
+<span class="line"><span>  &#x3C;div class="rounded-s-lg ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<p>Here are all the available border radius logical property utilities and
+their physical property equivalents in both LTR(Left-to-right) and RTL(Right-to-left) modes.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Left-to-right</th><th>Right-to-left</th></tr></thead><tbody><tr><td>rounded-s-*</td><td>rounded-l-*</td><td>rounded-r-*</td></tr><tr><td>rounded-e-*</td><td>rounded-r-*</td><td>rounded-l-*</td></tr><tr><td>rounded-ss-*</td><td>rounded-tl-*</td><td>rounded-tr-*</td></tr><tr><td>rounded-se-*</td><td>rounded-tr-*</td><td>rounded-tl-*</td></tr><tr><td>rounded-es-*</td><td>rounded-bl-*</td><td>rounded-br-*</td></tr><tr><td>rounded-ee-*</td><td>rounded-br-*</td><td>rounded-bl-*</td></tr></tbody></table>
+<p>For more control, you can also use the <a href="https://tailwindcss.com/docs/hover-focus-and-other-states#rtl-support">LTR and RTL modifiers</a> to
+conditionally apply specific styles depending on the current text direction.</p>
+<h3 id="creating-pill-buttons">Creating pill buttons</h3>
+<p>Use the <code>rounded-full</code> utility to create pill buttons:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;button class="rounded-full ...">Save Changes&#x3C;/button></span></span></code></pre>
+<h3 id="removing-the-border-radius">Removing the border radius</h3>
+<p>Use the <code>rounded-none</code> utility to remove an existing border radius from an element:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;button class="rounded-none ...">Save Changes&#x3C;/button></span></span></code></pre>
+<h3 id="using-a-custom-value">Using a custom value</h3>
+<p>Use the <code>rounded-[<value>]</value></code> syntax to set the border radius based on a completely custom value:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="rounded-[2vw] ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/border-radius">border radius</a></li>
+<li><a href="https://tailwindcss.com/docs/border-radius#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
