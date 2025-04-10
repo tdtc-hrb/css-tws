@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>visibility</title></head> <body> <h1>visibility</h1>  <p><em>Utilities for controlling the visibility of an element.</em></p> <p>2025-04-10</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>visible</td><td>visibility: visible;</td></tr><tr><td>invisible</td><td>visibility: hidden;</td></tr><tr><td>collapse</td><td>visibility: collapse;</td></tr></tbody></table>
+<h3 id="making-elements-invisible">Making elements invisible</h3>
+<p>Use the <code>invisible</code> utility to hide an element,
+but still maintain its place in the document, affecting the layout of other elements:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="grid grid-cols-3 gap-4"></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div class="invisible ...">02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="collapsing-elements">Collapsing elements</h3>
+<p>Use the <code>collapse</code> utility to hide table rows, row groups, columns,
+and column groups as if they were set to <code>display: none</code>, but without impacting the size of other rows and columns:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;table></span></span>
+<span class="line"><span>  &#x3C;thead></span></span>
+<span class="line"><span>    &#x3C;tr></span></span>
+<span class="line"><span>      &#x3C;th>Invoice #&#x3C;/th></span></span>
+<span class="line"><span>      &#x3C;th>Client&#x3C;/th></span></span>
+<span class="line"><span>      &#x3C;th>Amount&#x3C;/th></span></span>
+<span class="line"><span>    &#x3C;/tr></span></span>
+<span class="line"><span>  &#x3C;/thead></span></span>
+<span class="line"><span>  &#x3C;tbody></span></span>
+<span class="line"><span>    &#x3C;tr></span></span>
+<span class="line"><span>      &#x3C;td>#100&#x3C;/td></span></span>
+<span class="line"><span>      &#x3C;td>Pendant Publishing&#x3C;/td></span></span>
+<span class="line"><span>      &#x3C;td>$2,000.00&#x3C;/td></span></span>
+<span class="line"><span>    &#x3C;/tr></span></span>
+<span class="line"><span>    &#x3C;tr class="collapse"></span></span>
+<span class="line"><span>      &#x3C;td>#101&#x3C;/td></span></span>
+<span class="line"><span>      &#x3C;td>Kruger Industrial Smoothing&#x3C;/td></span></span>
+<span class="line"><span>      &#x3C;td>$545.00&#x3C;/td></span></span>
+<span class="line"><span>    &#x3C;/tr></span></span>
+<span class="line"><span>    &#x3C;tr></span></span>
+<span class="line"><span>      &#x3C;td>#102&#x3C;/td></span></span>
+<span class="line"><span>      &#x3C;td>J. Peterman&#x3C;/td></span></span>
+<span class="line"><span>      &#x3C;td>$10,000.25&#x3C;/td></span></span>
+<span class="line"><span>    &#x3C;/tr></span></span>
+<span class="line"><span>  &#x3C;/tbody></span></span>
+<span class="line"><span>&#x3C;/table></span></span></code></pre>
+<p>This makes it possible to dynamically toggle rows and columns without affecting the table layout.</p>
+<h3 id="making-elements-visible">Making elements visible</h3>
+<p>Use the <code>visible</code> utility to make an element visible:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="grid grid-cols-3 gap-4"></span></span>
+<span class="line"><span>  &#x3C;div>01&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div class="visible ...">02&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<p>This is mostly useful for undoing the <code>invisible</code> utility at different screen sizes.</p>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/visibility">visibility</a></li>
+<li><a href="https://tailwindcss.com/docs/visibility#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
