@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>word break</title></head> <body> <h1>word break</h1>  <p><em>Utilities for controlling word breaks in an element.</em></p> <p>2025-04-09</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>break-normal</td><td>word-break: normal;</td></tr><tr><td>break-all</td><td>word-break: break-all;</td></tr><tr><td>break-keep</td><td>word-break: keep-all;</td></tr></tbody></table>
+<h3 id="normal">Normal</h3>
+<p>Use the <code>break-normal</code> utility to only add line breaks at normal word break points:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;p class="break-normal">The longest word in any of the major...&#x3C;/p></span></span></code></pre>
+<h3 id="break-all">Break All</h3>
+<p>Use the <code>break-all</code> utility to add line breaks whenever necessary, without trying to preserve whole words:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;p class="break-all">The longest word in any of the major...&#x3C;/p></span></span></code></pre>
+<h3 id="break-keep">Break Keep</h3>
+<p>Use the <code>break-keep</code> utility to prevent line breaks from being applied to Chinese/Japanese/Korean (CJK) text:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;p class="break-keep">抗衡不屈不挠...&#x3C;/p></span></span></code></pre>
+<p>For non-CJK text the <code>break-keep</code> utility has the same behavior as the <code>break-normal</code> utility.</p>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://tailwindcss.com/docs/word-break">word break</a></li>
+<li><a href="https://tailwindcss.com/docs/word-break#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
