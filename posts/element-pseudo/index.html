@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>胶水 元素</title></head> <body> <h1>胶水 元素</h1>  <p><em>before, after</em></p> <p>2025-04-12</p> <p>Written by: tdtc</p> <p>zh-CN: 胶水 元素 可以 使用在 元素 上，也可以使用在 类（以及状态类）</p>
+<p>en-US: Glue(or Adhesive) elements can be used on elements or on classes (including state classes).</p>
+<ul>
+<li>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/::before#%E6%97%A0%E9%9A%9C%E7%A2%8D%E8%80%83%E8%99%91">无障碍考虑</a>:<br>
+不鼓励使用 胶水 元素 添加内容，因为屏幕阅读器无法可靠地访问它。</p>
+</li>
+<li>
+<p>Examples are from Bootstrap <a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/">v4.6.2</a></p>
+</li>
+</ul>
+<h3 id="before">before</h3>
+<ul>
+<li>breadcrumb</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>.breadcrumb-item + .breadcrumb-item::before {</span></span>
+<span class="line"><span>  float: left;</span></span>
+<span class="line"><span>  padding-right: 0.5rem;</span></span>
+<span class="line"><span>  color: #6c757d;</span></span>
+<span class="line"><span>  content: "/";</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<h3 id="after">after</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>.dropdown-toggle::after {</span></span>
+<span class="line"><span>  display: inline-block;</span></span>
+<span class="line"><span>  margin-left: 0.255em;</span></span>
+<span class="line"><span>  vertical-align: 0.255em;</span></span>
+<span class="line"><span>  content: "";</span></span>
+<span class="line"><span>  border-top: 0.3em solid;</span></span>
+<span class="line"><span>  border-right: 0.3em solid transparent;</span></span>
+<span class="line"><span>  border-bottom: 0;</span></span>
+<span class="line"><span>  border-left: 0.3em solid transparent;</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before">before</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::after">after</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">Pseudo-elements</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
