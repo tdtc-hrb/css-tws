@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.6.1"><title>tailwindcss outline</title></head> <body> <h1>tailwindcss outline</h1>  <p><em>Outline can be of any random shape as it tries to wrap around content of the element.</em></p> <p>2025-04-15</p> <p>Written by: tdtc</p> <p>tw中充斥了太多的outline!</p>
+<ul>
+<li>border 和 outline<br>
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/outline#border_%E5%92%8C_outline">outline 不占据空间，绘制于元素内容周围。</a></li>
+</ul>
+<p><img src="https://res.cloudinary.com/dkdpf5puv/image/upload/f_auto,c_limit,w_750,q_auto/v1654257705/images/border-vs-outline/border-vs-outline-effect-on-layout.png" alt="Difference in sibling element position"></p>
+<p><img src="https://res.cloudinary.com/dkdpf5puv/image/upload/f_auto,c_limit,w_750,q_auto/v1654262774/images/border-vs-outline/Border-vs-outline-different-styles-per-side.png" alt="Difference in style of different sides"></p>
+<h3 id="the-right-posture">The right posture</h3>
+<p>Outline can be of any random shape as it tries to wrap around content of the element.</p>
+<p>In below code playground, you can see how the outline is rendered with random shape when applied on multiline text.</p>
+<ul>
+<li>html</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="text-wrapper"></span></span>
+<span class="line"><span>    This is test content &#x3C;span class="highlight">to see how outline is shown when the content is wrapped&#x3C;/span> on multiple lines.</span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<ul>
+<li>css</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>.text-wrapper {</span></span>
+<span class="line"><span>  width: 200px;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>.highlight {</span></span>
+<span class="line"><span>  outline: 1px solid #ff77ab;</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/outline">outline - mdn</a></li>
+<li><a href="https://www.codewithshripal.com/articles/css/5-key-differences-between-border-and-outline">Border vs Outline - 5 Key Differences</a>
+-<a href="https://tailwindcss.com/docs/outline-width">outline-width</a></li>
+<li><a href="https://tailwindcss.com/docs/outline-color">outline-color</a></li>
+<li><a href="https://tailwindcss.com/docs/outline-style">outline-style</a></li>
+<li><a href="https://tailwindcss.com/docs/outline-offset">outline-offset</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
