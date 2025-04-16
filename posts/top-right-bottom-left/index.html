@@ -1,0 +1,487 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.7.0"><title>top / right / bottom / left</title></head> <body> <h1>top / right / bottom / left</h1>  <p><em>Utilities for controlling the placement of positioned elements.</em></p> <p>2025-04-15</p> <p>Written by: tdtc</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>Style</th></tr></thead><tbody><tr><td><code>inset-&#x3C;number></code></td><td><code>inset: calc(var(--spacing) * &#x3C;number>);</code></td></tr><tr><td><code>-inset-&#x3C;number></code></td><td><code>inset: calc(var(--spacing) * -&#x3C;number>);</code></td></tr><tr><td><code>inset-&#x3C;fraction></code></td><td><code>inset: calc(&#x3C;fraction> * 100%);</code></td></tr><tr><td><code>-inset-&#x3C;fraction></code></td><td><code>inset: calc(&#x3C;fraction> * -100%);</code></td></tr><tr><td>inset-px</td><td>inset: 1px;</td></tr><tr><td>-inset-px</td><td>inset: -1px;</td></tr><tr><td>inset-full</td><td>inset: 100%;</td></tr><tr><td>-inset-full</td><td>inset: -100%;</td></tr><tr><td>inset-auto</td><td>inset: auto;</td></tr><tr><td><code>inset-(&#x3C;custom-property>)</code></td><td><code>inset: var(&#x3C;custom-property>);</code></td></tr><tr><td><code>inset-[&#x3C;value>]</code></td><td><code>inset: &#x3C;value>;</code></td></tr><tr><td><code>inset-x-&#x3C;number></code></td><td><code>inset-inline: calc(var(--spacing) * &#x3C;number>);</code></td></tr><tr><td><code>-inset-x-&#x3C;number></code></td><td><code>inset-inline: calc(var(--spacing) * -&#x3C;number>);</code></td></tr><tr><td><code>inset-x-&#x3C;fraction></code></td><td><code>inset-inline: calc(&#x3C;fraction> * 100%);</code></td></tr><tr><td><code>-inset-x-&#x3C;fraction></code></td><td><code>inset-inline: calc(&#x3C;fraction> * -100%);</code></td></tr><tr><td>inset-x-px</td><td>inset-inline: 1px;</td></tr><tr><td>-inset-x-px</td><td>inset-inline: -1px;</td></tr><tr><td>inset-x-full</td><td>inset-inline: 100%;</td></tr><tr><td>-inset-x-full</td><td>inset-inline: -100%;</td></tr><tr><td>inset-x-auto</td><td>inset-inline: auto;</td></tr><tr><td><code>inset-x-(&#x3C;custom-property>)</code></td><td><code>inset-inline: var(&#x3C;custom-property>);</code></td></tr><tr><td><code>inset-x-[&#x3C;value>]</code></td><td><code>inset-inline: &#x3C;value>;</code></td></tr><tr><td><code>inset-y-&#x3C;number></code></td><td><code>inset-block: calc(var(--spacing) * &#x3C;number>);</code></td></tr><tr><td><code>-inset-y-&#x3C;number></code></td><td><code>inset-block: calc(var(--spacing) * -&#x3C;number>);</code></td></tr><tr><td><code>inset-y-&#x3C;fraction></code></td><td><code>inset-block: calc(&#x3C;fraction> * 100%);</code></td></tr><tr><td><code>-inset-y-&#x3C;fraction></code></td><td><code>inset-block: calc(&#x3C;fraction> * -100%);</code></td></tr><tr><td>inset-y-px</td><td>inset-block: 1px;</td></tr><tr><td>-inset-y-px</td><td>inset-block: -1px;</td></tr><tr><td>inset-y-full</td><td>inset-block: 100%;</td></tr><tr><td>-inset-y-full</td><td>inset-block: -100%;</td></tr><tr><td>inset-y-auto</td><td>inset-block: auto;</td></tr><tr><td><code>inset-y-(&#x3C;custom-property>)</code></td><td><code>inset-block: var(&#x3C;custom-property>);</code></td></tr><tr><td><code>inset-y-[&#x3C;value>]</code></td><td><code>inset-block: &#x3C;value>;</code></td></tr><tr><td><code>start-&#x3C;number></code></td><td><code>inset-inline-start: calc(var(--spacing) * &#x3C;number>);</code></td></tr><tr><td><code>-start-&#x3C;number></code></td><td><code>inset-inline-start: calc(var(--spacing) * -&#x3C;number>);</code></td></tr><tr><td><code>start-&#x3C;fraction></code></td><td><code>inset-inline-start: calc(&#x3C;fraction> * 100%);</code></td></tr><tr><td><code>-start-&#x3C;fraction></code></td><td><code>inset-inline-start: calc(&#x3C;fraction> * -100%);</code></td></tr><tr><td>start-px</td><td>inset-inline-start: 1px;</td></tr><tr><td>-start-px</td><td>inset-inline-start: -1px;</td></tr><tr><td>start-full</td><td>inset-inline-start: 100%;</td></tr><tr><td>-start-full</td><td>inset-inline-start: -100%;</td></tr><tr><td>start-auto</td><td>inset-inline-start: auto;</td></tr><tr><td><code>start-(&#x3C;custom-property>)</code></td><td><code>inset-inline-start: var(&#x3C;custom-property>);</code></td></tr><tr><td><code>start-[&#x3C;value>]</code></td><td><code>inset-inline-start: &#x3C;value>;</code></td></tr><tr><td><code>end-&#x3C;number></code></td><td><code>inset-inline-end: calc(var(--spacing) * &#x3C;number>);</code></td></tr><tr><td><code>-end-&#x3C;number></code></td><td><code>inset-inline-end: calc(var(--spacing) * -&#x3C;number>);</code></td></tr><tr><td><code>end-&#x3C;fraction></code></td><td><code>inset-inline-end: calc(&#x3C;fraction> * 100%);</code></td></tr><tr><td><code>-end-&#x3C;fraction></code></td><td><code>inset-inline-end: calc(&#x3C;fraction> * -100%);</code></td></tr><tr><td>end-px</td><td>inset-inline-end: 1px;</td></tr><tr><td>-end-px</td><td>inset-inline-end: -1px;</td></tr><tr><td>end-full</td><td>inset-inline-end: 100%;</td></tr><tr><td>-end-full</td><td>inset-inline-end: -100%;</td></tr><tr><td>end-auto</td><td>inset-inline-end: auto;</td></tr><tr><td><code>end-(&#x3C;custom-property>)</code></td><td><code>inset-inline-end: var(&#x3C;custom-property>);</code></td></tr><tr><td><code>end-[&#x3C;value>]</code></td><td><code>inset-inline-end: &#x3C;value>;</code></td></tr><tr><td><code>top-&#x3C;number></code></td><td><code>top: calc(var(--spacing) * &#x3C;number>);</code></td></tr><tr><td><code>-top-&#x3C;number></code></td><td><code>top: calc(var(--spacing) * -&#x3C;number>);</code></td></tr><tr><td><code>top-&#x3C;fraction></code></td><td><code>top: calc(&#x3C;fraction> * 100%);</code></td></tr><tr><td><code>-top-&#x3C;fraction></code></td><td><code>top: calc(&#x3C;fraction> * -100%);</code></td></tr><tr><td>top-px</td><td>top: 1px;</td></tr><tr><td>-top-px</td><td>top: -1px;</td></tr><tr><td>top-full</td><td>top: 100%;</td></tr><tr><td>-top-full</td><td>top: -100%;</td></tr><tr><td>top-auto</td><td>top: auto;</td></tr><tr><td><code>top-(&#x3C;custom-property>)</code></td><td><code>top: var(&#x3C;custom-property>);</code></td></tr><tr><td><code>top-[&#x3C;value>]</code></td><td><code>top: &#x3C;value>;</code></td></tr><tr><td><code>right-&#x3C;number></code></td><td><code>right: calc(var(--spacing) * &#x3C;number>);</code></td></tr><tr><td><code>-right-&#x3C;number></code></td><td><code>right: calc(var(--spacing) * -&#x3C;number>);</code></td></tr><tr><td><code>right-&#x3C;fraction></code></td><td><code>right: calc(&#x3C;fraction> * 100%);</code></td></tr><tr><td><code>-right-&#x3C;fraction></code></td><td><code>right: calc(&#x3C;fraction> * -100%);</code></td></tr><tr><td>right-px</td><td>right: 1px;</td></tr><tr><td>-right-px</td><td>right: -1px;</td></tr><tr><td>right-full</td><td>right: 100%;</td></tr><tr><td>-right-full</td><td>right: -100%;</td></tr><tr><td>right-auto</td><td>right: auto;</td></tr><tr><td><code>right-(&#x3C;custom-property>)</code></td><td><code>right: var(&#x3C;custom-property>);</code></td></tr><tr><td><code>right-[&#x3C;value>]</code></td><td><code>right: &#x3C;value>;</code></td></tr><tr><td><code>bottom-&#x3C;number></code></td><td><code>bottom: calc(var(--spacing) * &#x3C;number>);</code></td></tr><tr><td><code>-bottom-&#x3C;number></code></td><td><code>bottom: calc(var(--spacing) * -&#x3C;number>);</code></td></tr><tr><td><code>bottom-&#x3C;fraction></code></td><td><code>bottom: calc(&#x3C;fraction> * 100%);</code></td></tr><tr><td><code>-bottom-&#x3C;fraction></code></td><td><code>bottom: calc(&#x3C;fraction> * -100%);</code></td></tr><tr><td>bottom-px</td><td>bottom: 1px;</td></tr><tr><td>-bottom-px</td><td>bottom: -1px;</td></tr><tr><td>bottom-full</td><td>bottom: 100%;</td></tr><tr><td>-bottom-full</td><td>bottom: -100%;</td></tr><tr><td>bottom-auto</td><td>bottom: auto;</td></tr><tr><td><code>bottom-(&#x3C;custom-property>)</code></td><td><code>bottom: var(&#x3C;custom-property>);</code></td></tr><tr><td><code>bottom-[&#x3C;value>]</code></td><td><code>bottom: &#x3C;value>;</code></td></tr><tr><td><code>left-&#x3C;number></code></td><td><code>left: calc(var(--spacing) * &#x3C;number>);</code></td></tr><tr><td><code>-left-&#x3C;number></code></td><td><code>left: calc(var(--spacing) * -&#x3C;number>);</code></td></tr><tr><td><code>left-&#x3C;fraction></code></td><td><code>left: calc(&#x3C;fraction> * 100%);</code></td></tr><tr><td><code>-left-&#x3C;fraction></code></td><td><code>left: calc(&#x3C;fraction> * -100%);</code></td></tr><tr><td>left-px</td><td>left: 1px;</td></tr><tr><td>-left-px</td><td>left: -1px;</td></tr><tr><td>left-full</td><td>left: 100%;</td></tr><tr><td>-left-full</td><td>left: -100%;</td></tr><tr><td>left-auto</td><td>left: auto;</td></tr><tr><td><code>left-(&#x3C;custom-property>)</code></td><td><code>left: var(&#x3C;custom-property>);</code></td></tr><tr><td><code>left-[&#x3C;value>]</code></td><td><code>left: &#x3C;value>;</code></td></tr></tbody></table>
+<h3 id="basic-example">Basic example</h3>
+<p>Use <code>top-<number></number></code>,
+<code>right-<number></number></code>, <code>bottom-<number></number></code>,
+<code>left-<number></number></code>, and <code>inset-<number></number></code> utilities like
+<code>top-0</code> and <code>bottom-4</code> to set the horizontal or vertical position of a <a href="https://tailwindcss.com/docs/position">positioned element</a>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;!-- Pin to top left corner --></span></span>
+<span class="line"><span>&#x3C;div class="relative size-32 ..."></span></span>
+<span class="line"><span>  &#x3C;div class="absolute top-0 left-0 size-16 ...">01&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;!-- Span top edge --></span></span>
+<span class="line"><span>&#x3C;div class="relative size-32 ..."></span></span>
+<span class="line"><span>  &#x3C;div class="absolute inset-x-0 top-0 h-16 ...">02&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;!-- Pin to top right corner --></span></span>
+<span class="line"><span>&#x3C;div class="relative size-32 ..."></span></span>
+<span class="line"><span>  &#x3C;div class="absolute top-0 right-0 size-16 ...">03&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;!-- Span left edge --></span></span>
+<span class="line"><span>&#x3C;div class="relative size-32 ..."></span></span>
+<span class="line"><span>  &#x3C;div class="absolute inset-y-0 left-0 w-16 ...">04&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;!-- Fill entire parent --></span></span>
+<span class="line"><span>&#x3C;div class="relative size-32 ..."></span></span>
+<span class="line"><span>  &#x3C;div class="absolute inset-0 ...">05&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;!-- Span right edge --></span></span>
+<span class="line"><span>&#x3C;div class="relative size-32 ..."></span></span>
+<span class="line"><span>  &#x3C;div class="absolute inset-y-0 right-0 w-16 ...">06&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;!-- Pin to bottom left corner --></span></span>
+<span class="line"><span>&#x3C;div class="relative size-32 ..."></span></span>
+<span class="line"><span>  &#x3C;div class="absolute bottom-0 left-0 size-16 ...">07&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;!-- Span bottom edge --></span></span>
+<span class="line"><span>&#x3C;div class="relative size-32 ..."></span></span>
+<span class="line"><span>  &#x3C;div class="absolute inset-x-0 bottom-0 h-16 ...">08&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;!-- Pin to bottom right corner --></span></span>
+<span class="line"><span>&#x3C;div class="relative size-32 ..."></span></span>
+<span class="line"><span>  &#x3C;div class="absolute right-0 bottom-0 size-16 ...">09&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="using-negative-values">Using negative values</h3>
+<p>To use a negative top/right/bottom/left value, prefix the class name with a dash to convert it to a negative value:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="relative size-32 ..."></span></span>
+<span class="line"><span>  &#x3C;div class="absolute -top-4 -left-4 size-14 ...">&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h3 id="using-logical-properties">Using logical properties</h3>
+<p>Use <code>start-<number></number></code> or <code>end-<number></number></code> utilities like
+<code>start-0</code> and <code>end-4</code> to set the <code>inset-inline-start</code>
+and <code>inset-inline-end</code> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts">logical properties</a>,
+which map to either the left or right side based on the text direction:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div dir="ltr"></span></span>
+<span class="line"><span>  &#x3C;div class="relative size-32 ..."></span></span>
+<span class="line"><span>    &#x3C;div class="absolute start-0 top-0 size-14 ...">&#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;div></span></span>
+<span class="line"><span>    &#x3C;div dir="rtl"></span></span>
+<span class="line"><span>      &#x3C;div class="relative size-32 ..."></span></span>
+<span class="line"><span>        &#x3C;div class="absolute start-0 top-0 size-14 ...">&#x3C;/div></span></span>
+<span class="line"><span>      &#x3C;/div></span></span>
+<span class="line"><span>      &#x3C;div>&#x3C;/div></span></span>
+<span class="line"><span>    &#x3C;/div></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<p>For more control, you can also use the <a href="https://tailwindcss.com/docs/hover-focus-and-other-states#rtl-support">LTR and RTL modifiers</a>
+to conditionally apply specific styles depending on the current text direction.</p>
+<h3 id="using-a-custom-value">Using a custom value</h3>
+<p>Use utilities like <code>inset-[<value>]</value></code> and <code>top-[<value>]</value></code> to set the position based on a completely custom value:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="inset-[3px] ..."></span></span>
+<span class="line"><span>  &#x3C;!-- ... --></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/inset">inset</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/top">top</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/right">right</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/bottom">bottom</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/left">left</a></li>
+<li><a href="https://tailwindcss.com/docs/top-right-bottom-left">top / right / bottom / left</a></li>
+<li><a href="https://tailwindcss.com/docs/top-right-bottom-left#responsive-design">Responsive design</a></li>
+</ul>  <footer> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
