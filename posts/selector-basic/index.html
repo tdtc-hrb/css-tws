@@ -1,20 +1,30 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.7.3"><title>CSS选择器</title></head> <body> <h1>CSS选择器</h1>  <p><em>关系选择器, 选择器</em></p> <p>2025-04-06</p> <p>Written by: tdtc</p> <h1 id="combinators"><a href="https://www.w3schools.com/cssref/css_ref_combinators.php">Combinators</a></h1>
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.7.3"><title>CSS选择器</title></head> <body> <h1>CSS选择器</h1>  <p><em>关系选择器, 选择器</em></p> <p>2025-04-19</p> <p>Written by: tdtc</p> <h1 id="combinators"><a href="https://www.w3schools.com/cssref/css_ref_combinators.php">Combinators</a></h1>
 <ul>
 <li>Child combinator</li>
 <li>Descendant combinator</li>
 <li>Next-sibling combinator</li>
 <li>Subsequent-sibling combinator</li>
 </ul>
-<h3 id="子元素"><a href="https://www.w3schools.com/cssref/sel_element_gt.php">子元素</a></h3>
-<blockquote>
+<h3 id="子元素"><a href="https://www.w3school.com.cn/css/css_selector_child.asp">子元素</a></h3>
 <p>当前元素的下一级元素。</p>
-</blockquote>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#E1E4E8">element1 </span><span style="color:#F97583">></span><span style="color:#E1E4E8"> element2 {</span></span>
 <span class="line"><span style="color:#79B8FF">  css</span><span style="color:#79B8FF"> declarations</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">} </span></span></code></pre>
+<ul>
+<li><a href="https://tailwindcss.com/docs/hover-focus-and-other-states#styling-direct-children">tailwind</a></li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>*</span></span></code></pre>
+<p>equ</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>></span></span></code></pre>
 <h3 id="后代元素"><a href="https://www.w3school.com.cn/css/css_selector_descendant.asp">后代元素</a></h3>
+<p>当前元素（ol）下的所有li元素。</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="xml"><code><span class="line"><span style="color:#E1E4E8">ol li</span></span></code></pre>
-<p>就表示当前元素（ol）下的所有li元素。</p>
+<ul>
+<li><a href="https://tailwindcss.com/docs/hover-focus-and-other-states#styling-all-descendants">tailwind</a></li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>**</span></span></code></pre>
+<p>equ</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>space key</span></span></code></pre>
 <h3 id="接续兄弟元素"><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Next-sibling_combinator">接续兄弟元素</a></h3>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>element1 + element2 {</span></span>
 <span class="line"><span>  css declarations;</span></span>
