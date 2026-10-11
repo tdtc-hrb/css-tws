@@ -1,29 +1,29 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.8.2"><title>display</title></head> <body> <h1>display</h1>  <p><em>Utilities for controlling the display box type of an element.</em></p> <p>2025-04-09</p> <p>Written by: tdtc</p> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Class</th><th>Styles</th></tr></thead><tbody><tr><td>inline</td><td>display: inline;</td></tr><tr><td>block</td><td>display: block;</td></tr><tr><td>inline-block</td><td>display: inline-block;</td></tr><tr><td>hidden</td><td>display: none;</td></tr></tbody></table>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.3.8"><title>display</title></head><body><h1>display</h1><p><em>Utilities for controlling the display box type of an element.</em></p><p>2025-04-09</p><p>Written by: tdtc</p><table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Styles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>inline</td>
+<td>display: inline;</td>
+</tr>
+<tr>
+<td>block</td>
+<td>display: block;</td>
+</tr>
+<tr>
+<td>inline-block</td>
+<td>display: inline-block;</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>display: none;</td>
+</tr>
+</tbody>
+</table>
 <p>常用值:</p>
 <ul>
 <li>Block and Inline</li>
@@ -56,39 +56,40 @@
 <h3 id="block-and-inline">Block and Inline</h3>
 <p>Use the <code>inline</code>, <code>inline-block</code>, and <code>block</code>
 utilities to control the flow of text and elements:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;p></span></span>
-<span class="line"><span>  When controlling the flow of text, using the CSS property &#x3C;span class="inline">display: inline&#x3C;/span> will cause the</span></span>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&lt;p&gt;</span></span>
+<span class="line"><span>  When controlling the flow of text, using the CSS property &lt;span class="inline"&gt;display: inline&lt;/span&gt; will cause the</span></span>
 <span class="line"><span>  text inside the element to wrap normally.</span></span>
-<span class="line"><span>&#x3C;/p></span></span>
-<span class="line"><span>&#x3C;p></span></span>
-<span class="line"><span>  While using the property &#x3C;span class="inline-block">display: inline-block&#x3C;/span> will wrap the element to prevent the</span></span>
+<span class="line"><span>&lt;/p&gt;</span></span>
+<span class="line"><span>&lt;p&gt;</span></span>
+<span class="line"><span>  While using the property &lt;span class="inline-block"&gt;display: inline-block&lt;/span&gt; will wrap the element to prevent the</span></span>
 <span class="line"><span>  text inside from extending beyond its parent.</span></span>
-<span class="line"><span>&#x3C;/p></span></span>
-<span class="line"><span>&#x3C;p></span></span>
-<span class="line"><span>  Lastly, using the property &#x3C;span class="block">display: block&#x3C;/span> will put the element on its own line and fill its</span></span>
+<span class="line"><span>&lt;/p&gt;</span></span>
+<span class="line"><span>&lt;p&gt;</span></span>
+<span class="line"><span>  Lastly, using the property &lt;span class="block"&gt;display: block&lt;/span&gt; will put the element on its own line and fill its</span></span>
 <span class="line"><span>  parent.</span></span>
-<span class="line"><span>&#x3C;/p></span></span></code></pre>
+<span class="line"><span>&lt;/p&gt;</span></span></code></pre>
 <h3 id="hidden">Hidden</h3>
 <p>Use the <code>hidden</code> utility to remove an element from the document:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class="flex ..."></span></span>
-<span class="line"><span>  &#x3C;div class="hidden ...">01&#x3C;/div></span></span>
-<span class="line"><span>  &#x3C;div>02&#x3C;/div></span></span>
-<span class="line"><span>  &#x3C;div>03&#x3C;/div></span></span>
-<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&lt;div class="flex ..."&gt;</span></span>
+<span class="line"><span>  &lt;div class="hidden ..."&gt;01&lt;/div&gt;</span></span>
+<span class="line"><span>  &lt;div&gt;02&lt;/div&gt;</span></span>
+<span class="line"><span>  &lt;div&gt;03&lt;/div&gt;</span></span>
+<span class="line"><span>&lt;/div&gt;</span></span></code></pre>
 <h3 id="screen-reader-only">Screen-reader only</h3>
 <p>Use <code>sr-only</code> to hide an element visually without hiding it from screen readers:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;a href="#"></span></span>
-<span class="line"><span>  &#x3C;svg>&#x3C;!-- ... -->&#x3C;/svg></span></span>
-<span class="line"><span>  &#x3C;span class="sr-only">Settings&#x3C;/span></span></span>
-<span class="line"><span>&#x3C;/a></span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&lt;a href="#"&gt;</span></span>
+<span class="line"><span>  &lt;svg&gt;&lt;!-- ... --&gt;&lt;/svg&gt;</span></span>
+<span class="line"><span>  &lt;span class="sr-only"&gt;Settings&lt;/span&gt;</span></span>
+<span class="line"><span>&lt;/a&gt;</span></span></code></pre>
 <p>Use <code>not-sr-only</code> to undo <code>sr-only</code>, making an element visible to sighted users as well as screen readers:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;a href="#"></span></span>
-<span class="line"><span>  &#x3C;svg>&#x3C;!-- ... -->&#x3C;/svg></span></span>
-<span class="line"><span>  &#x3C;span class="sr-only sm:not-sr-only">Settings&#x3C;/span></span></span>
-<span class="line"><span>&#x3C;/a></span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&lt;a href="#"&gt;</span></span>
+<span class="line"><span>  &lt;svg&gt;&lt;!-- ... --&gt;&lt;/svg&gt;</span></span>
+<span class="line"><span>  &lt;span class="sr-only sm:not-sr-only"&gt;Settings&lt;/span&gt;</span></span>
+<span class="line"><span>&lt;/a&gt;</span></span></code></pre>
 <h2 id="ref">Ref</h2>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display - mdn</a></li>
 <li><a href="https://tailwindcss.com/docs/display">display</a></li>
 <li><a href="https://tailwindcss.com/docs/display#responsive-design">Responsive design</a></li>
-</ul>  <footer> <a href="https://tdtc-hrb.github.io/blog-frontend">blog-frontend</a> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
+</ul>
+<footer><a href="https://tdtc-hrb.github.io/blog-frontend">blog-frontend</a><a href="https://tdtc-hrb.github.io/com-vc">com-vc</a><a href="https://tdtc-hrb.github.io/css-tws">css-tws</a><a href="https://tdtc-hrb.github.io/ops-win">ops-win</a></footer></body></html>

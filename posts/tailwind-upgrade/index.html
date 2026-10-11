@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.8.2"><title>tailwindcss upgrade</title></head> <body> <h1>tailwindcss upgrade</h1>  <p><em>v0.1, v1, v2, v3 to v4</em></p> <p>2025-04-09</p> <p>Written by: tdtc</p> <h3 id="prefix"><a href="https://stackoverflow.com/a/79411170">prefix</a></h3>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.3.8"><title>tailwindcss upgrade</title></head><body><h1>tailwindcss upgrade</h1><p><em>v0.1, v1, v2, v3 to v4</em></p><p>2025-04-09</p><p>Written by: tdtc</p><h3 id="prefix"><a href="https://stackoverflow.com/a/79411170">prefix</a></h3>
 <ul>
 <li>v4</li>
 </ul>
@@ -13,93 +13,93 @@
 <ul>
 <li><a href="https://tailwindcss.com/docs/upgrade-guide#renamed-utilities">Renamed utilities - v4</a>:</li>
 </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>v3</th><th>v4</th></tr></thead><tbody><tr><td>shadow-sm</td><td>shadow-xs</td></tr><tr><td>shadow</td><td>shadow-sm</td></tr><tr><td>drop-shadow-sm</td><td>drop-shadow-xs</td></tr><tr><td>drop-shadow</td><td>drop-shadow-sm</td></tr><tr><td>blur-sm</td><td>blur-xs</td></tr><tr><td>blur</td><td>blur-sm</td></tr><tr><td>backdrop-blur-sm</td><td>backdrop-blur-xs</td></tr><tr><td>backdrop-blur</td><td>backdrop-blur-sm</td></tr><tr><td>rounded-sm</td><td>rounded-xs</td></tr><tr><td>rounded</td><td>rounded-sm</td></tr><tr><td>outline-none</td><td>outline-hidden</td></tr><tr><td>ring</td><td>ring-3</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>v3</th>
+<th>v4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shadow-sm</td>
+<td>shadow-xs</td>
+</tr>
+<tr>
+<td>shadow</td>
+<td>shadow-sm</td>
+</tr>
+<tr>
+<td>drop-shadow-sm</td>
+<td>drop-shadow-xs</td>
+</tr>
+<tr>
+<td>drop-shadow</td>
+<td>drop-shadow-sm</td>
+</tr>
+<tr>
+<td>blur-sm</td>
+<td>blur-xs</td>
+</tr>
+<tr>
+<td>blur</td>
+<td>blur-sm</td>
+</tr>
+<tr>
+<td>backdrop-blur-sm</td>
+<td>backdrop-blur-xs</td>
+</tr>
+<tr>
+<td>backdrop-blur</td>
+<td>backdrop-blur-sm</td>
+</tr>
+<tr>
+<td>rounded-sm</td>
+<td>rounded-xs</td>
+</tr>
+<tr>
+<td>rounded</td>
+<td>rounded-sm</td>
+</tr>
+<tr>
+<td>outline-none</td>
+<td>outline-hidden</td>
+</tr>
+<tr>
+<td>ring</td>
+<td>ring-3</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><a href="https://v3.tailwindcss.com/docs/upgrade-guide#class-name-changes">class-name-changes - v3</a>:</li>
 </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>old</th><th>new</th></tr></thead><tbody><tr><td>overflow-clip</td><td>text-clip</td></tr><tr><td>overflow-ellipsis</td><td>text-ellipsis</td></tr><tr><td>flex-grow-0</td><td>grow-0</td></tr><tr><td>flex-shrink</td><td>shrink</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>old</th>
+<th>new</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>overflow-clip</td>
+<td>text-clip</td>
+</tr>
+<tr>
+<td>overflow-ellipsis</td>
+<td>text-ellipsis</td>
+</tr>
+<tr>
+<td>flex-grow-0</td>
+<td>grow-0</td>
+</tr>
+<tr>
+<td>flex-shrink</td>
+<td>shrink</td>
+</tr>
+</tbody>
+</table>
 <h3 id="flex-grow"><a href="https://tailwindcss.com/docs/upgrade-guide#removed-deprecated-utilities">flex-grow</a></h3>
 <ul>
 <li>v4</li>
@@ -181,12 +181,12 @@
 <li><a href="https://github.com/awssat/tailwindo">BootstrapFramework.php</a></li>
 </ul>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>            //https://getbootstrap.com/docs/4.6/utilities/embed/</span></span>
-<span class="line"><span>            'embed-responsive'       => 'relative block w-full p-0 overflow-hidden',</span></span>
-<span class="line"><span>            'embed-responsive-item'  => 'absolute top-0 bottom-0 left-0 w-full h-full border-0',</span></span>
-<span class="line"><span>            'embed-responsive-21by9' => 'aspect-21/9',</span></span>
-<span class="line"><span>            'embed-responsive-16by9' => 'aspect-16/9',</span></span>
-<span class="line"><span>            'embed-responsive-4by3'  => 'aspect-4/3',</span></span>
-<span class="line"><span>            'embed-responsive-1by1'  => 'aspect-square',</span></span></code></pre>
+<span class="line"><span>            'embed-responsive'       =&gt; 'relative block w-full p-0 overflow-hidden',</span></span>
+<span class="line"><span>            'embed-responsive-item'  =&gt; 'absolute top-0 bottom-0 left-0 w-full h-full border-0',</span></span>
+<span class="line"><span>            'embed-responsive-21by9' =&gt; 'aspect-21/9',</span></span>
+<span class="line"><span>            'embed-responsive-16by9' =&gt; 'aspect-16/9',</span></span>
+<span class="line"><span>            'embed-responsive-4by3'  =&gt; 'aspect-4/3',</span></span>
+<span class="line"><span>            'embed-responsive-1by1'  =&gt; 'aspect-square',</span></span></code></pre>
 <h4 id="v2-and-v3">v2 and v3</h4>
 <ul>
 <li><a href="https://v2.tailwindcss.com/docs/plugins#aspect-ratio">plugins - v2</a></li>
@@ -216,91 +216,91 @@
 </ul>
 <h3 id="class-name-changes---v2">Class name changes - v2</h3>
 <p><a href="https://v2.tailwindcss.com/docs/upgrading-to-v2#update-renamed-utility-classes">Update renamed utility classes</a> :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>old</th><th>new</th></tr></thead><tbody><tr><td>whitespace-no-wrap</td><td>whitespace-nowrap</td></tr><tr><td>flex-no-wrap</td><td>flex-nowrap</td></tr><tr><td>col-gap-{n}</td><td>gap-x-{n}</td></tr><tr><td>row-gap-{n}</td><td>gap-y-{n}</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>old</th>
+<th>new</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>whitespace-no-wrap</td>
+<td>whitespace-nowrap</td>
+</tr>
+<tr>
+<td>flex-no-wrap</td>
+<td>flex-nowrap</td>
+</tr>
+<tr>
+<td>col-gap-{n}</td>
+<td>gap-x-{n}</td>
+</tr>
+<tr>
+<td>row-gap-{n}</td>
+<td>gap-y-{n}</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><a href="https://v2.tailwindcss.com/docs/upgrading-to-v2#support-for-ie-11-has-been-dropped">Support for IE 11 has been dropped - v2</a></li>
 </ul>
 <h4 id="replace-shadow-outline-and-shadow-xs-with-ring-utilities"><a href="https://v2.tailwindcss.com/docs/upgrading-to-v2#replace-shadow-outline-and-shadow-xs-with-ring-utilities">Replace shadow-outline and shadow-xs with ring utilities</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>old</th><th>new</th></tr></thead><tbody><tr><td>focus:shadow-outline</td><td>focus:ring</td></tr><tr><td>shadow-xs</td><td>ring-1 ring-black ring-opacity-5</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>old</th>
+<th>new</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>focus:shadow-outline</td>
+<td>focus:ring</td>
+</tr>
+<tr>
+<td>shadow-xs</td>
+<td>ring-1 ring-black ring-opacity-5</td>
+</tr>
+</tbody>
+</table>
 <h4 id="replace-clearfix-with-flow-root"><a href="https://v2.tailwindcss.com/docs/upgrading-to-v2#replace-clearfix-with-flow-root">Replace clearfix with flow-root</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>old</th><th>new</th></tr></thead><tbody><tr><td>clearfix</td><td>flow-root</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>old</th>
+<th>new</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clearfix</td>
+<td>flow-root</td>
+</tr>
+</tbody>
+</table>
 <h4 id="update-font-weight-class-names-for-100-and-200-weights"><a href="https://v2.tailwindcss.com/docs/upgrading-to-v2#update-font-weight-class-names-for-100-and-200-weights">Update font-weight class names for 100 and 200 weights</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Font weight</th><th>old</th><th>new</th></tr></thead><tbody><tr><td>100</td><td>font-hairline</td><td>font-thin</td></tr><tr><td>200</td><td>font-thin</td><td>font-extralight</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>Font weight</th>
+<th>old</th>
+<th>new</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>font-hairline</td>
+<td>font-thin</td>
+</tr>
+<tr>
+<td>200</td>
+<td>font-thin</td>
+<td>font-extralight</td>
+</tr>
+</tbody>
+</table>
 <h2 id="bs2tw"><a href="https://github.com/awssat/tailwindo/blob/master/src/Framework/BootstrapFramework.php">bs2tw</a></h2>
 <h3 id="text">text</h3>
 <h4 id="initialism">initialism</h4>
@@ -318,4 +318,5 @@
 <ul>
 <li><a href="https://v1.tailwindcss.com/docs/upgrading-to-v1">Upgrading from v0.x to v1.0</a></li>
 <li><a href="https://johnzanussi.com/posts/bootstrap-to-tailwind-migration">Migrating from Bootstrap to Tailwind</a></li>
-</ul>  <footer> <a href="https://tdtc-hrb.github.io/blog-frontend">blog-frontend</a> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
+</ul>
+<footer><a href="https://tdtc-hrb.github.io/blog-frontend">blog-frontend</a><a href="https://tdtc-hrb.github.io/com-vc">com-vc</a><a href="https://tdtc-hrb.github.io/css-tws">css-tws</a><a href="https://tdtc-hrb.github.io/ops-win">ops-win</a></footer></body></html>

@@ -1,44 +1,44 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.8.2"><title>dropdown - tailwindcss</title></head> <body> <h1>dropdown - tailwindcss</h1>  <p><em>dropdown</em></p> <p>2025-04-05</p> <p>Written by: tdtc</p> <ul>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v7.3.8"><title>dropdown - tailwindcss</title></head><body><h1>dropdown - tailwindcss</h1><p><em>dropdown</em></p><p>2025-04-05</p><p>Written by: tdtc</p><ul>
 <li>bootstrap</li>
 </ul>
 <blockquote>
 <p>v4.6.2</p>
 </blockquote>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>        &#x3C;li class="dropdown"></span></span>
-<span class="line"><span>            &#x3C;a  href="#">About&#x3C;/a></span></span>
-<span class="line"><span>            &#x3C;div class="dropdown-menu"></span></span>
-<span class="line"><span>                &#x3C;a class="dropdown-item" href="https://localhost:5001/About/profile">profile&#x3C;/a></span></span>
-<span class="line"><span>                &#x3C;a class="dropdown-item" href="https://localhost:5001/About/innovations">innovations&#x3C;/a></span></span>
-<span class="line"><span>                &#x3C;a class="dropdown-item" href="https://localhost:5001/About/qualifications">qualifications&#x3C;/a></span></span>
-<span class="line"><span>            &#x3C;/div></span></span>
-<span class="line"><span>        &#x3C;/li></span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>        &lt;li class="dropdown"&gt;</span></span>
+<span class="line"><span>            &lt;a  href="#"&gt;About&lt;/a&gt;</span></span>
+<span class="line"><span>            &lt;div class="dropdown-menu"&gt;</span></span>
+<span class="line"><span>                &lt;a class="dropdown-item" href="https://localhost:5001/About/profile"&gt;profile&lt;/a&gt;</span></span>
+<span class="line"><span>                &lt;a class="dropdown-item" href="https://localhost:5001/About/innovations"&gt;innovations&lt;/a&gt;</span></span>
+<span class="line"><span>                &lt;a class="dropdown-item" href="https://localhost:5001/About/qualifications"&gt;qualifications&lt;/a&gt;</span></span>
+<span class="line"><span>            &lt;/div&gt;</span></span>
+<span class="line"><span>        &lt;/li&gt;</span></span></code></pre>
 <ul>
 <li>tailwindcss</li>
 </ul>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;!doctype html></span></span>
-<span class="line"><span>&#x3C;html></span></span>
-<span class="line"><span>&#x3C;head></span></span>
-<span class="line"><span>  &#x3C;meta charset="utf-8"></span></span>
-<span class="line"><span>  &#x3C;script src="https://unpkg.com/@tailwindcss/browser@4">&#x3C;/script></span></span>
-<span class="line"><span>&#x3C;/head></span></span>
-<span class="line"><span>&#x3C;body></span></span>
-<span class="line"><span>&#x3C;li class="relative"></span></span>
-<span class="line"><span>    &#x3C;div class="flex-col" style="cursor:pointer"></span></span>
-<span class="line"><span>        &#x3C;a class="inline-flex items-center px-4 py-2" href="#" onclick="toggleDropdown()"></span></span>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&lt;!doctype html&gt;</span></span>
+<span class="line"><span>&lt;html&gt;</span></span>
+<span class="line"><span>&lt;head&gt;</span></span>
+<span class="line"><span>  &lt;meta charset="utf-8"&gt;</span></span>
+<span class="line"><span>  &lt;script src="https://unpkg.com/@tailwindcss/browser@4"&gt;&lt;/script&gt;</span></span>
+<span class="line"><span>&lt;/head&gt;</span></span>
+<span class="line"><span>&lt;body&gt;</span></span>
+<span class="line"><span>&lt;li class="relative"&gt;</span></span>
+<span class="line"><span>    &lt;div class="flex-col" style="cursor:pointer"&gt;</span></span>
+<span class="line"><span>        &lt;a class="inline-flex items-center px-4 py-2" href="#" onclick="toggleDropdown()"&gt;</span></span>
 <span class="line"><span>            About1</span></span>
-<span class="line"><span>        &#x3C;/a></span></span>
-<span class="line"><span>        &#x3C;svg class="w-5 h-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" onclick="toggleDropdown()"></span></span>
-<span class="line"><span>            &#x3C;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 10l5 5 5-5H7z"/></span></span>
-<span class="line"><span>        &#x3C;/svg></span></span>
-<span class="line"><span>    &#x3C;/div></span></span>
-<span class="line"><span>    &#x3C;div class="absolute left-0 z-50 float-left hidden py-2 mt-1 text-base bg-white border border-gray-300 rounded group-hover:block"></span></span>
-<span class="line"><span>        &#x3C;a class="block py-1 px-6 font-normal text-gray-900 whitespace-nowrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/profile">profile&#x3C;/a></span></span>
-<span class="line"><span>        &#x3C;a class="block py-1 px-6 font-normal text-gray-900 whitespace-nowrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/innovations">innovations&#x3C;/a></span></span>
-<span class="line"><span>        &#x3C;a class="block py-1 px-6 font-normal text-gray-900 whitespace-nowrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/qualifications">qualifications&#x3C;/a></span></span>
-<span class="line"><span>    &#x3C;/div></span></span>
-<span class="line"><span>&#x3C;/li></span></span>
+<span class="line"><span>        &lt;/a&gt;</span></span>
+<span class="line"><span>        &lt;svg class="w-5 h-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" onclick="toggleDropdown()"&gt;</span></span>
+<span class="line"><span>            &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 10l5 5 5-5H7z"/&gt;</span></span>
+<span class="line"><span>        &lt;/svg&gt;</span></span>
+<span class="line"><span>    &lt;/div&gt;</span></span>
+<span class="line"><span>    &lt;div class="absolute left-0 z-50 float-left hidden py-2 mt-1 text-base bg-white border border-gray-300 rounded group-hover:block"&gt;</span></span>
+<span class="line"><span>        &lt;a class="block py-1 px-6 font-normal text-gray-900 whitespace-nowrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/profile"&gt;profile&lt;/a&gt;</span></span>
+<span class="line"><span>        &lt;a class="block py-1 px-6 font-normal text-gray-900 whitespace-nowrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/innovations"&gt;innovations&lt;/a&gt;</span></span>
+<span class="line"><span>        &lt;a class="block py-1 px-6 font-normal text-gray-900 whitespace-nowrap border-0 hover:bg-gray-200" href="https://localhost:5001/About/qualifications"&gt;qualifications&lt;/a&gt;</span></span>
+<span class="line"><span>    &lt;/div&gt;</span></span>
+<span class="line"><span>&lt;/li&gt;</span></span>
 <span class="line"><span></span></span>
-<span class="line"><span>&#x3C;script></span></span>
+<span class="line"><span>&lt;script&gt;</span></span>
 <span class="line"><span>    function toggleDown(element) {</span></span>
 <span class="line"><span>        // Prevent exception: captured element is svg</span></span>
 <span class="line"><span>        if (element.nodeName != 'svg')</span></span>
@@ -52,14 +52,14 @@
 <span class="line"><span>        console.log(element.nodeName);</span></span>
 <span class="line"><span>        toggleDown(element);</span></span>
 <span class="line"><span>        </span></span>
-<span class="line"><span>        setTimeout(() => {</span></span>
+<span class="line"><span>        setTimeout(() =&gt; {</span></span>
 <span class="line"><span>            toggleDown(element);</span></span>
 <span class="line"><span>        }, 2000);</span></span>
 <span class="line"><span>    }</span></span>
-<span class="line"><span>&#x3C;/script></span></span>
+<span class="line"><span>&lt;/script&gt;</span></span>
 <span class="line"><span></span></span>
-<span class="line"><span>&#x3C;/body></span></span>
-<span class="line"><span>&#x3C;/html></span></span></code></pre>
+<span class="line"><span>&lt;/body&gt;</span></span>
+<span class="line"><span>&lt;/html&gt;</span></span></code></pre>
 <h3 id="w-full">w-full</h3>
 <p>在特定的环境下会出现溢出的情况<br>
 <a href="https://play.tailwindcss.com/Hqp9d5Ersu">Background length overflow on hover</a></p>
@@ -83,4 +83,5 @@
 <li><a href="https://tailwindcss.com/docs/align-items#center">items-center</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">Element: classList property</a></li>
 <li><a href="https://www.w3schools.com/howto/howto_js_dropdown.asp">How TO - Clickable Dropdown</a></li>
-</ul>  <footer> <a href="https://tdtc-hrb.github.io/blog-frontend">blog-frontend</a> <a href="https://tdtc-hrb.github.io/com-vc">com-vc</a> <a href="https://tdtc-hrb.github.io/css-tws">css-tws</a> <a href="https://tdtc-hrb.github.io/ops-win">ops-win</a> </footer> </body></html>
+</ul>
+<footer><a href="https://tdtc-hrb.github.io/blog-frontend">blog-frontend</a><a href="https://tdtc-hrb.github.io/com-vc">com-vc</a><a href="https://tdtc-hrb.github.io/css-tws">css-tws</a><a href="https://tdtc-hrb.github.io/ops-win">ops-win</a></footer></body></html>
